@@ -46,8 +46,8 @@ const App = () => {
 <Route path="/login" element={<SignIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>}/>
 <Route path="/register" element={<Register/>}/>
 <Route path="/about" element={<About/>}/>
-<Route path="/cats" element={<Cats/>}/>
-<Route path="/cats/add" element={<AddCat/>}/>
+<Route path="/cats" element={<Cats user={user}/>}/>
+<Route path="/cats/add" element={<AddCat user={user}/>}/>
 <Route path="/devices" element={<Devices/>}/>
 
 
