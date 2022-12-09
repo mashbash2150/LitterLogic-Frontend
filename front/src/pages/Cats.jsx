@@ -1,8 +1,14 @@
 import React from 'react'
+import CatCard from '../components/CatCard'
 
 const Cats = () => {
   return (
-    <div>Cats</div>
+    <div>ACTIVE PETS
+      <div>
+        <CatCard />
+      </div>
+      <button>ADD PET</button>
+    </div>
   )
 }
 

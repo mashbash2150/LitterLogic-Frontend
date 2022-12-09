@@ -9,7 +9,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
       <div>
         <NavLink to='/'>HOME</NavLink>
         <NavLink to='/about'>ABOUT</NavLink>
-        <NavLink to='/devices'>MY DEVICES</NavLink>
+        <NavLink to='/devices'>ACTIVITY</NavLink>
         <NavLink to='/cats'>MY PETS</NavLink>
         <NavLink onClick={handleLogOut} to='/'>LOG OUT</NavLink>
       </div>
