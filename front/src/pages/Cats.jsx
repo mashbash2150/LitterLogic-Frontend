@@ -21,13 +21,13 @@ const Cats = ({ user }) => {
   }, [user])
   return (
     <div>ACTIVE PETS
-      <div>
+      <div className="cat-container">
         <div>{catList?.map((cat) => (
           <div className="cat-container" key={cat.id}>
             <div>NAME {cat.name}</div>
             <div>BIRTHDAY {cat.birthday}</div>
             <div>WEIGHT {cat.weight}</div>
-            <div>HEALTH CONDITIONS {cat.healthConditions?.map((condition) => (<div>{condition}</div>))}</div>
+            <div>HEALTH CONDITIONS {cat.healthConditions?.map((condition) => (<div key={condition.id}>{condition}</div>))}</div>
             <div>NOTES {cat.notes}</div>
             <div></div>
           </div>

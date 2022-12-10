@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router'
 import { CheckSession } from './services/Auth'
@@ -40,7 +41,7 @@ const App = () => {
       <div>
           <Nav authenticated={authenticated} user={user} handleLogOut={handleLogOut}/>
       </div>
-      <main>
+      <div>
         <Routes>
 <Route path="/" element={<Home authenticated={authenticated} user={user}/>}/>
 <Route path="/login" element={<SignIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>}/>
@@ -52,7 +53,7 @@ const App = () => {
 
 
         </Routes>
-      </main>
+      </div>
      
     </div>
   )

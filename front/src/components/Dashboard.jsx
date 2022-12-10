@@ -3,12 +3,12 @@ import CatCard from './CatCard'
 
 const Dashboard = () => {
   return (
-    <div>
-      <div>PETS</div>
-      <div>
+    <div className="dash-container">
+      <div className="dash-section">PETS</div>
+      <div className="dash-section">
         RECENT ACTIVITY
       </div>
-      <div>
+      <div className="dash-section">
         INSIGHTS
       </div>
     </div>

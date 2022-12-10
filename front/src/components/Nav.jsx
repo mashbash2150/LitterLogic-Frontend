@@ -28,11 +28,13 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
 
   return (
     <div>
-      <div>
-        <h1>LITTERLOGIC</h1>
+      <div className="title-container">
+        <div className="page-title">LITTERLOGIC</div>
       </div>
-      <div>
-        {authenticated && user ? authOptions : unAuthOptions}
+      <div className="nav-container">
+        <div className="nav-options">
+          {authenticated && user ? authOptions : unAuthOptions}
+        </div>
       </div>
 
     </div>
