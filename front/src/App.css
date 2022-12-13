@@ -45,12 +45,57 @@ body {
 
 }
 
+.dash-title {
+  font-size: 2.5vh;
+}
+
 .dash-section,
 .device-section {
 
-  width: 350px;
-  height: 150px;
+  width: 600px;
+  height: 300px;
   text-align: center;
   border: 2px solid black;
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
+}
+
+.section-header {
+  font-size: 2vh;
+}
+
+.trigger-entry,
+.dash-trigger {
+  display: flex;
+}
+
+.dash-cats {
+  border: 2px solid black;
+  font-size: 2vh;
+  margin-top: 2vh;
+}
+
+.stats {
+  font-size: 3vh;
+}
+
+.trigger-container {
+  display: flex;
+  margin-top: 4vh;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.trigger-entry div {
+  display: flex;
+  align-items: center;
+  margin: 0 1vh 1vh 1vh;
+  font-size: 1.5vh;
+
+}
+
+.del-button {
+  border: none;
+  background: none;
+  padding: 0 0 12px 0;
 }

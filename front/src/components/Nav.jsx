@@ -7,7 +7,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
   if (user) {
     authOptions = (
       <div>
-        <NavLink to='/'>HOME</NavLink>
+        <NavLink to='/dashboard'>HOME</NavLink>
         <NavLink to='/about'>ABOUT</NavLink>
         <NavLink to='/devices'>DEVICES</NavLink>
         <NavLink to='/cats'>PETS</NavLink>

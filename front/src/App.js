@@ -10,9 +10,14 @@ import Cats from './pages/Cats'
 import About from './pages/About'
 import AddCat from './pages/AddCat'
 import Home from './pages/Home'
+import Triggers from './pages/Triggers'
 import Devices from './pages/Devices'
+import Dashboard from './components/Dashboard'
+import UserContext from './UserContext'
 
-const App = () => {
+//export const UserContext=React.createContext()
+
+ const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
@@ -42,14 +47,17 @@ const App = () => {
           <Nav authenticated={authenticated} user={user} handleLogOut={handleLogOut}/>
       </div>
       <div>
+
         <Routes>
 <Route path="/" element={<Home authenticated={authenticated} user={user}/>}/>
+<Route path="/dashboard" element={<Dashboard authenticated={authenticated} user={user}/>}/>
 <Route path="/login" element={<SignIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>}/>
 <Route path="/register" element={<Register/>}/>
 <Route path="/about" element={<About/>}/>
 <Route path="/cats" element={<Cats user={user}/>}/>
 <Route path="/cats/add" element={<AddCat user={user}/>}/>
 <Route path="/devices" element={<Devices/>}/>
+<Route path="/triggers/:cat_id" element={<Triggers/>}/>
 
 
         </Routes>

@@ -16,7 +16,7 @@ const Login = ({ toggleAuthenticated, setUser }) => {
     setFormValues({ firstName: '', lastName: '', email: '', password: '' })
     setUser(payload)
     toggleAuthenticated(true)
-    navigate('/')
+    navigate('/dashboard')
   }
 
   return (
