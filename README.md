@@ -1,5 +1,5 @@
 LitterLogic-Frontend
-## *SEI 9-19 Project 4 ME(V)N-Stack App*
+## *SEI 9-19 Project 4 PERN-Stack App*
 
 ### Date: Dec 15, 2022
 
@@ -12,7 +12,7 @@ LitterLogic-Frontend
 
 ### **_Description_**
 
-LitterLogic is an app and IOT solution that aims to both bring humor into your life, and help you monitor your cat's health.  Armed with simple PIR sensors, a cat's visit to the LitterBox will trigger two things: the power on an obnoxious LED sign (available for customization - think: "Occupied", "Pooping", "On Air") and an entry on your cat's LitterLogic Database detailing the time and duration of their visit.    
+LitterLogic is an app and IOT solution that aims to both bring humor into your life, and help you monitor your cat's health.  Armed with simple PIR sensors, a cat's visit to the LitterBox will trigger two things: the power on an obnoxious LED sign (available for customization - think: "Occupied", "Pooping", "On Air") and an entry on your cat's LitterLogic Database detailing the time and duration of their visit. Post MVP update will trigger an exhaust fan after the cat exits the litterbox.    
 
 For older cats with kidney and digestive health issues, proactivity is of the essence, and LitterLogic arms you with data you need to discuss with your Vet how best to care for your furry loved ones while providing you, the owner, with some much needed comic relief. 
 
@@ -25,10 +25,9 @@ For older cats with kidney and digestive health issues, proactivity is of the es
 
 #### 
 
-LitterLogic will feature MEVN(?) stack technologies.  The frontend will focus on:
+LitterLogic will feature PERN stack technologies.  
 
-This app will feature ME(V)RN stack technologies for the front end. 
-And will be built with Vue, using underlying HTML, CSS, and Javascript to ensure an engaging, visually appealing, and responsive UI. 
+This front end will be built with React, using underlying HTML, CSS, and Javascript to ensure an engaging, visually appealing, and responsive UI. 
 
 
 
@@ -57,6 +56,7 @@ TBD
 - [x] Multi-Cat recognition with RFID collar tags
 - [ ] Advanced Charting 
 - [ ] Predictive Analytics
+- [ ] Hardware Updates
 - [ ] Bug Fix
 - [ ] Bug Fix
 - [ ] Etc.
