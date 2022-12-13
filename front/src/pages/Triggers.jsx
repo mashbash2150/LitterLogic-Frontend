@@ -7,8 +7,23 @@ import { useParams } from "react-router-dom"
 const Triggers = () => {
 
   let { cat_id } = useParams()
-  const [triggerList, setTriggerList] = useState(null)
+  const [triggerList, setTriggerList] = useState([])
   const [deleted, setDeleted] = useState(false)
+  const [dtArray, setDtArray] = useState([])
+  // const [triggerData,setTriggerData]=useState({
+  //   labels:triggerList.map((data)=>data.createdAt),
+  //   datasets:[
+  //     {
+  //       label:"Visits Per Day"
+  //     }
+  //   ]
+  // })
+
+  const parseTimeStamps = (arg) => {
+    arg.map((trig) => (
+      trig.createdAt.split(/T|\./).slice(0, 2)))
+  }
+
 
 
   const getCatTriggers = async () => {
@@ -16,6 +31,8 @@ const Triggers = () => {
     const res = await axios.get(`${BASE_URL}/triggers/${cat_id}`)
 
     setTriggerList(res.data)
+    setDtArray(parseTimeStamps(triggerList))
+
   }
 
   const deleteTrigger = async (arg) => {
@@ -34,9 +51,12 @@ const Triggers = () => {
   return (
     <div>
 
+
+
       <div className='section-header'>LITTERBOX EVENTS</div>
       <div className="trigger-container">
         <div>{triggerList?.map((trigger) => (
+
           <div key={trigger.id} className="trigger-entry">
             <div>TRIGGERED: {trigger.createdAt}</div>
             <div>{trigger.action.toUpperCase()}</div>

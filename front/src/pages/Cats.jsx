@@ -10,9 +10,9 @@ const Cats = ({ user }) => {
   let navigate = useNavigate()
 
   const [catList, setCatList] = useState([])
-  const [catId, setCatId] = useState()
+  const [catId, setCatId] = useState('')
   const [triggerList, setTriggerList] = useState([])
-  const [selectedCat, setSelectedCat] = useState(null)
+  const [selectedCat, setSelectedCat] = useState('')
 
   const getUserCats = async () => {
     console.log(user)

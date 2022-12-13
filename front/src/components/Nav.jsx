@@ -13,7 +13,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
         <NavLink to='/cats'>PETS</NavLink>
         <NavLink to='/about'>ABOUT</NavLink>
         <NavLink onClick={handleLogOut} to='/'>LOG OUT</NavLink>
-        <img src="https://i.imgur.com/aSdUiH9.png" alt="" />
+        <img className="header-img" src="https://i.imgur.com/aSdUiH9.png" alt="" />
       </div>
     )
   }
@@ -23,7 +23,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
       <NavLink to='/about'>ABOUT</NavLink>
       <NavLink to='/login'>LOGIN</NavLink>
       <NavLink to='/register'>REGISTER</NavLink>
-      <img src="https://i.imgur.com/aSdUiH9.png" alt="" />
+      <img className="header-img" src="https://i.imgur.com/aSdUiH9.png" alt="" />
 
     </div>
   )

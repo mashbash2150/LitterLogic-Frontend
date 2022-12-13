@@ -7,7 +7,7 @@
 body {
   margin: 0 auto;
   height: 100vh;
-  background: lightblue;
+  background: rgb(117, 196, 193);
   font-family: 'Rajdhani', sans-serif;
 }
 
@@ -35,6 +35,18 @@ body {
   justify-content: flex-start;
 }
 
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5vh;
+  font-size: 2vh;
+  text-align: center;
+}
+
+
+
 .aside {
   padding-top: 3vh;
   font-size: 2vh;
@@ -43,7 +55,7 @@ body {
 .nav-options a {
   text-decoration: none;
   padding: 10px;
-  color: rgb(140, 138, 138);
+  color: rgb(7, 6, 6);
 
 
 }
@@ -111,7 +123,7 @@ body {
   align-items: center;
 }
 
-img {
+.header-img {
   width: 25vh;
   height: 15vh;
   opacity: 0.6;
@@ -143,5 +155,67 @@ form {
 
 input {
   margin-bottom: 2vh;
+
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 8vh;
+}
+
+
+
+.overlay {
+  background-image: url("https://i.imgur.com/8tTtPv4.png");
+  background-size: contain;
+  width: 65vw;
+  height: 50vw;
+  border-radius: 15px;
+  grid-column: 2/3;
+  opacity: 0.8;
+
+}
+
+
+
+.fade {
+  -webkit-animation: 1.5s fade;
+  animation: 1.5s fade;
+}
+
+.fade-in {
+  -webkit-animation: 1.5s fade;
+  animation: 10s fade;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.0
+  }
+
+  to {
+    opacity: 0.9
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.0
+  }
+
+  to {
+    opacity: 0.8
+  }
+}
+
+
+
+
+.overlay-text {
+
+  grid-column: 2/3;
+  font-size: 5vh;
+
 
 }

@@ -10,9 +10,9 @@ import { useContext } from 'react'
 const Dashboard = ({ user }) => {
 
 
-  const [catList, setCatList] = useState(null)
-  const [catId, setCatId] = useState()
-  const [triggerList, setTriggerList] = useState(null)
+  const [catList, setCatList] = useState([])
+  const [catId, setCatId] = useState('')
+  const [triggerList, setTriggerList] = useState([])
 
 
   const getUserCats = async () => {
