@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import Header from './Header';
 
 const Nav = ({ authenticated, user, handleLogOut }) => {
 
@@ -8,10 +9,11 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
     authOptions = (
       <div>
         <NavLink to='/dashboard'>HOME</NavLink>
-        <NavLink to='/about'>ABOUT</NavLink>
         <NavLink to='/devices'>DEVICES</NavLink>
         <NavLink to='/cats'>PETS</NavLink>
+        <NavLink to='/about'>ABOUT</NavLink>
         <NavLink onClick={handleLogOut} to='/'>LOG OUT</NavLink>
+        <img src="https://i.imgur.com/aSdUiH9.png" alt="" />
       </div>
     )
   }
@@ -21,6 +23,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
       <NavLink to='/about'>ABOUT</NavLink>
       <NavLink to='/login'>LOGIN</NavLink>
       <NavLink to='/register'>REGISTER</NavLink>
+      <img src="https://i.imgur.com/aSdUiH9.png" alt="" />
 
     </div>
   )
@@ -28,9 +31,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
 
   return (
     <div>
-      <div className="title-container">
-        <div className="page-title">LITTERLOGIC</div>
-      </div>
+
       <div className="nav-container">
         <div className="nav-options">
           {authenticated && user ? authOptions : unAuthOptions}

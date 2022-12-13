@@ -14,6 +14,7 @@ import Triggers from './pages/Triggers'
 import Devices from './pages/Devices'
 import Dashboard from './components/Dashboard'
 import UserContext from './UserContext'
+import Header from './components/Header'
 
 //export const UserContext=React.createContext()
 
@@ -44,6 +45,7 @@ import UserContext from './UserContext'
   return (
     <div>
       <div>
+      <Header />
           <Nav authenticated={authenticated} user={user} handleLogOut={handleLogOut}/>
       </div>
       <div>

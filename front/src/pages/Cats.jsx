@@ -45,12 +45,12 @@ const Cats = ({ user }) => {
 
   }, [catId])
   return (
-    <div>
+    <div className="pets-container">
       <div className='section-header'>ACTIVE PETS </div>
       <Link to={'/cats/add'}>
         <button>ADD PET</button>
       </Link>
-      <div className="pets-container">
+      <div >
         <div>{catList?.map((cat) => (
           <div key={cat.id} className="cat-container" onClick={() => getCatId(cat.id)}>
             <div>NAME {cat.name}</div>

@@ -47,8 +47,8 @@ const AddCat = ({ user }) => {
 
 
   return (
-    <div className='form-container'>
-      <div className='form'>
+    <div >
+      <div className='form-container'>
         <form onSubmit={handleSubmit}>
           <label className="label" htmlFor="name">
             PET'S NAME
@@ -84,21 +84,9 @@ const AddCat = ({ user }) => {
             onChange={handleChange}
 
           />
-          <label className="label" htmlFor="healthConditions">
-            KNOWN HEALTH CONDITIONS
-          </label>
-          <input
-            id="healthConditions"
-            className="input"
-            type="text"
-            value={arrayValue}
-            onChange={addToArray}
 
-          />
 
-          <div>{formState.healthConditions?.map((condition) => (
-            <div key={condition.id}>{condition}</div>
-          ))}</div>
+
           <label className="label" htmlFor="notes">
             NOTES
           </label>
@@ -112,11 +100,11 @@ const AddCat = ({ user }) => {
           />
 
           <button className="button" type="submit">
-            ADD PET
+            CREATE CAT
           </button>
-
+          <div className="aside">Need to Pair a new device? <br></br> Head over to the Devices page</div>
         </form>
-        <button onClick={() => pushToArray(formState.healthConditions)}>+</button>
+
       </div>
     </div>
   )
