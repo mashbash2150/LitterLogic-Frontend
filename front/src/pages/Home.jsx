@@ -14,6 +14,11 @@ const Home = ({ user }) => {
   const fadeImages = [
     {
 
+      url: 'https://github.com/mashbash2150/LitterLogic-Frontend/blob/main/images/IMG_9239.JPG?raw=true',
+
+    },
+    {
+
       url: 'https://images.unsplash.com/photo-1576120634744-ee3b635e950e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
 
     },
