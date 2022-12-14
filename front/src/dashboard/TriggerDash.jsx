@@ -41,7 +41,7 @@ const TriggerDash = () => {
 
   return (
     <div>TriggerDash
-      <Table paginationRows={5} />
+      <Table paginationRows={5} getRecent={true} />
     </div>
   )
 }

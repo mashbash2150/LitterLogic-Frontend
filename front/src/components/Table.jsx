@@ -8,11 +8,12 @@ import LineChart from '../charts/LineChart'
 // import ArrowDownward from '../@material-ui/icons/ArrowDownward';
 
 
-const Table = ({ paginationRows }) => {
+const Table = ({ paginationRows, getRecent }) => {
   let { cat_id } = useParams()
   let navigate = useNavigate()
   const [triggerList, setTriggerList] = useState([])
   const [perPage, setPerPage] = useState(5)
+  const currentDate = new Date()
   // const sortIcon = <ArrowDownward />;
 
   const columns = [
@@ -21,19 +22,39 @@ const Table = ({ paginationRows }) => {
       selector: (row) => row.action.toUpperCase()
     },
     {
-      name: "Date",
-      selector: (row) => row.date.substring(0, row.date.lastIndexOf('T'))
-    },
-    {
       name: "Time",
       selector: (row) => row.time
     },
+    {
+      name: "Date",
+      selector: (row) => row.date.substring(0, row.date.lastIndexOf('T'))
+    },
 
+
+  ]
+  const conditionalRowStyles = [
+    {
+      when: row => row.action == "enter",
+      style: {
+        backgroundColor: "lightgrey"
+      }
+    }
   ]
 
   const getCatTriggers = async () => {
 
+    const today = parseInt(currentDate.getDate())
+    console.log("today is", today)
     const res = await axios.get(`${BASE_URL}/triggers/2`)
+    if (getRecent = true) {
+      const recent = res.data.filter((trig) => {
+        console.log(today + 1)
+        return trig.date.substring(8, 10) == today + 1
+
+      })
+      console.log("recent", recent)
+      setTriggerList(recent)
+    } else { setTriggerList(res.data) }
     setTriggerList(res.data)
 
     // setDtArray(parseTimeStamps(triggerList))
@@ -59,8 +80,12 @@ const Table = ({ paginationRows }) => {
         hightlightOnHover={true}
         pointerOnHover={true}
         persistTableHead={true}
+        defaultSortAsc={false}
+        defaultSortFieldId="2"
         paginationPerPage={paginationRows}
+        conditionalRowStyles={conditionalRowStyles}
         onRowClicked={(row, onClick) => { getTrigger(row.id) }}
+
       />
     </div>
   )
