@@ -24,6 +24,91 @@ body {
   padding: 4vh;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10vh;
+  text-align: center;
+  margin-bottom: -15vh;
+  font-size: 2vh;
+}
+
+.home .large {
+  font-size: 5vw;
+  margin: 2vh;
+}
+
+.p-flex-short p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+.p-img {
+  margin-right: 20px;
+
+}
+
+.p-flex-long {
+  display: flex;
+  justify-content: center;
+}
+
+.emph {
+  font-size: 3vh;
+  color: rgb(58, 127, 205);
+  font-style: italic;
+}
+
+.p-flex-long p {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: rgba(193, 242, 48, 0.552);
+  border-radius: 15px;
+  padding: 20px;
+
+
+}
+
+.p-flex-short {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.slide-container {
+  width: 350px;
+}
+
+.p-flex-short p {
+  display: flex;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  background-color: rgba(193, 242, 48, 0.552);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0 20px 0 20px;
+  line-height: 30px;
+  ;
+
+
+}
+
+.short {
+  font-size: 3.5vh;
+}
+
 .trigger-entry div {
   padding: 10px;
 }
@@ -94,13 +179,31 @@ body {
 
 }
 
-.dash-container,
+
 .device-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 5vh;
+}
+
+.dash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+
+
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
 
 
 }
@@ -112,7 +215,6 @@ body {
 
 .dash-section,
 .device-section {
-
   width: 700px;
   height: 300px;
   text-align: center;
@@ -287,15 +389,18 @@ input {
 .each-fade {
   display: flex;
   justify-content: center;
+
 }
 
 
+
 .image-container img {
-  width: 80vw;
-  height: 60vw;
-  object-fit: cover;
+  width: 350px;
+  height: 268px;
+
   border-radius: 20px;
-  margin-top: 20vh;
+
+
   opacity: 0.7
 }
 

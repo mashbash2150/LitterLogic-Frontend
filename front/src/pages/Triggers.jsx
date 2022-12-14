@@ -12,6 +12,7 @@ const Triggers = () => {
   const [triggerList, setTriggerList] = useState([])
   const [deleted, setDeleted] = useState(false)
   const [perPage, setPerPage] = useState(10)
+  const date = new Date()
 
   const columns = [
     {
@@ -82,13 +83,14 @@ const Triggers = () => {
           <div key={trigger.id} className="trigger-entry">
             <div>DATE: {trigger.date.substring(0, trigger.date.lastIndexOf('T'))}</div>
             <div>TIME: {trigger.time}</div>
+            {/* <div>TIME: {Date(Date.parse(trigger.createdAt)).substring(16, 24)}</div> */}
             <div>{trigger.action.toUpperCase()}</div>
 
             <button className="del-button" onClick={() => deleteTrigger(trigger.id)}>x</button>
           </div>
         ))}
           <div >
-            {/* <LineChart /> */}
+
           </div>
 
 

@@ -17,31 +17,17 @@ const Cats = ({ user }) => {
 
   const [perPage, setPerPage] = useState(10)
 
-  const columns = [
-    {
-      name: "Action",
-      selector: (row) => row.action
-    },
-    {
-      name: "Date",
-      selector: (row) => row.date
-    },
-    {
-      name: "Time",
-      selector: (row) => row.time
-    },
 
-  ]
 
 
 
   const getUserCats = async () => {
-    console.log(user)
+    //console.log(user)
     const res = await axios.get(`${BASE_URL}/cats/${user.id}`)
-    console.log('userlistingcats', res.data)
+    //console.log('userlistingcats', res.data)
     setCatList(res.data)
     setCatId(res.data[0].id)
-    console.log("catId", catList[0].id)
+    //console.log("catId", catList[0].id)
     // getCatTriggers(catList[0].id)
   }
 
@@ -59,7 +45,7 @@ const Cats = ({ user }) => {
     // getCatTriggers(selected)
   }
   const triggerEdit = () => {
-    navigate(`/triggers/${catId}`)
+    navigate(`/triggers/2`)
     // getCatTriggers(selected)
   }
 
@@ -77,8 +63,7 @@ const Cats = ({ user }) => {
             <div className="cat-name">{cat.name}</div>
             <div>BIRTHDAY {cat.birthday}</div>
             <div>WEIGHT {cat.weight}</div>
-            {/* <div>HEALTH CONDITIONS {cat.healthConditions?.map((condition) => (
-              <div key={condition.id}>{condition}</div>))}</div> */}
+
             <div>NOTES {cat.notes}</div>
             <div></div>
           </div>

@@ -11,7 +11,7 @@ import LineChart from '../charts/LineChart'
 const CatDash = ({ user }) => {
 
   const [catList, setCatList] = useState([])
-  const [selectedCat, setSelectedCat] = useState('')
+
 
   const getUserCats = async () => {
     console.log(user)
@@ -26,7 +26,7 @@ const CatDash = ({ user }) => {
   }, [])
 
   return (
-    <div>CatDash
+    <div>
       <div>{catList?.map((cat) => (
         <div key={cat.id} className="cat-container">
           <div className="cat-name">{cat.name}</div>
