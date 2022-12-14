@@ -42,17 +42,17 @@ const Cats = ({ user }) => {
     setCatList(res.data)
     setCatId(res.data[0].id)
     console.log("catId", catList[0].id)
-    getCatTriggers(catList[0].id)
+    // getCatTriggers(catList[0].id)
   }
 
-  const getCatTriggers = async (arg) => {
-    console.log(catList)
-    const res = await axios.get(`${BASE_URL}/triggers/${arg}`)
-    const newArr = res.data.map((trig) => (
-      trig.createdAt.split(/T|\./).slice(0, 2)))
-    console.log("newARr", newArr)
-    setTriggerList(newArr)
-  }
+  // const getCatTriggers = async (arg) => {
+  //   console.log(catList)
+  //   const res = await axios.get(`${BASE_URL}/triggers/2`)
+  //   const newArr = res.data.map((trig) => (
+  //     trig.createdAt.split(/T|\./).slice(0, 2)))
+  //   console.log("newARr", newArr)
+  //   setTriggerList(newArr)
+  // }
 
   const getCatId = (selected) => {
     setSelectedCat(selected)
@@ -95,7 +95,7 @@ const Cats = ({ user }) => {
 
           <div className='section-header'>LITTERBOX EVENTS</div>
           <div className="trigger-container">
-            <Table paginationRows={10} />
+            <Table paginationRows={10} getRecent={false} />
             {/* <div>{triggerList?.map((trigger) => (
               <div key={trigger.id} className="trigger-entry">
                 <div>ACTION: {trigger.action}</div>

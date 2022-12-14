@@ -42,20 +42,25 @@ const Table = ({ paginationRows, getRecent }) => {
   ]
 
   const getCatTriggers = async () => {
-
-    const today = parseInt(currentDate.getDate())
-    console.log("today is", today)
+    //conditionally rendering smaller list if Component is rendered through dashboard (and thus getREcent prop passed in is true)
+    const hrs = parseInt(currentDate.getHours()) - 14
+    const day = parseInt(currentDate.getDate())
+    console.log("today is", day + 1)
+    console.log("hours", hrs)
     const res = await axios.get(`${BASE_URL}/triggers/2`)
-    if (getRecent = true) {
+    if (getRecent == true) {
       const recent = res.data.filter((trig) => {
-        console.log(today + 1)
-        return trig.date.substring(8, 10) == today + 1
+        if (parseInt(trig.date.substring(8, 10)) === day + 1) {
+          console.log(parseInt(trig.time.substring(0, 2)))
 
+          return parseInt(trig.time.substring(0, 2)) >= hrs
+        } console.log(parseInt(trig.date.substring(8, 10)))
       })
+
       console.log("recent", recent)
       setTriggerList(recent)
     } else { setTriggerList(res.data) }
-    setTriggerList(res.data)
+
 
     // setDtArray(parseTimeStamps(triggerList))
   }
@@ -72,6 +77,8 @@ const Table = ({ paginationRows, getRecent }) => {
   return (
     <div>
       <DataTable
+        className='data-table'
+        theme="dark"
         title="RECENT ACTIVITY"
         columns={columns}
         data={triggerList}

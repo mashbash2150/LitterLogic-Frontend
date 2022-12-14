@@ -27,6 +27,11 @@ body {
   padding: 10px;
 }
 
+.data-table {
+  width: 600px;
+  border-radius: 10px;
+}
+
 .cat-name {
   font-size: 3vh;
 }
