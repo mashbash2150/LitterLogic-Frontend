@@ -7,6 +7,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { useContext } from 'react'
 import Chart from '../charts/Chart'
 import LineChart from '../charts/LineChart'
+import Table from '../components/Table'
 
 const TriggerDash = () => {
 
@@ -16,9 +17,10 @@ const TriggerDash = () => {
   const [triggerList, setTriggerList] = useState([])
 
 
+
   const getCatTriggers = async () => {
     if (catId) {
-      const res = await axios.get(`${BASE_URL}/triggers/${catId}`)
+      const res = await axios.get(`${BASE_URL}/triggers/2`)
       console.log('triggers', res.data)
       setTriggerList(res.data.slice(0, 6))
     } else {
@@ -38,7 +40,9 @@ const TriggerDash = () => {
 
 
   return (
-    <div>TriggerDash</div>
+    <div>TriggerDash
+      <Table paginationRows={5} />
+    </div>
   )
 }
 

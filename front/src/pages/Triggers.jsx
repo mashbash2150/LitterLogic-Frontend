@@ -3,6 +3,7 @@ import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
+import DataTable from "react-data-table-component"
 import LineChart from '../charts/LineChart'
 
 const Triggers = () => {
@@ -10,7 +11,24 @@ const Triggers = () => {
   let { cat_id } = useParams()
   const [triggerList, setTriggerList] = useState([])
   const [deleted, setDeleted] = useState(false)
-  const [dtArray, setDtArray] = useState([])
+  const [perPage, setPerPage] = useState(10)
+
+  const columns = [
+    {
+      name: "Action",
+      selector: (row) => row.action
+    },
+    {
+      name: "Date",
+      selector: (row) => row.date
+    },
+    {
+      name: "Time",
+      selector: (row) => row.time
+    },
+
+  ]
+
   // const [triggerData,setTriggerData]=useState({
   //   labels:triggerList.map((data)=>data.createdAt),
   //   datasets:[
@@ -29,7 +47,7 @@ const Triggers = () => {
 
   const getCatTriggers = async () => {
 
-    const res = await axios.get(`${BASE_URL}/triggers/${cat_id}`)
+    const res = await axios.get(`${BASE_URL}/triggers/2`)
     // const newArr = res.data.map((trig) => (
     //   trig.createdAt.split(/T|\./).slice(0, 2)))
     // console.log("newARr", newArr)

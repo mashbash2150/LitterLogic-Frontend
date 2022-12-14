@@ -11,6 +11,9 @@ import CatDash from '../dashboard/CatDash'
 import TriggerDash from '../dashboard/TriggerDash'
 
 const Dashboard = ({ user }) => {
+
+
+
   return (
     <div className="dash-contaner">Dashboard
       <div className="dash-title">PETS</div>

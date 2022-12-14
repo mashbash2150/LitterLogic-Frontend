@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import Table from '../components/Table'
 
 
 const Cats = ({ user }) => {
@@ -13,6 +14,26 @@ const Cats = ({ user }) => {
   const [catId, setCatId] = useState('')
   const [triggerList, setTriggerList] = useState([])
   const [selectedCat, setSelectedCat] = useState('')
+
+  const [perPage, setPerPage] = useState(10)
+
+  const columns = [
+    {
+      name: "Action",
+      selector: (row) => row.action
+    },
+    {
+      name: "Date",
+      selector: (row) => row.date
+    },
+    {
+      name: "Time",
+      selector: (row) => row.time
+    },
+
+  ]
+
+
 
   const getUserCats = async () => {
     console.log(user)
@@ -74,16 +95,19 @@ const Cats = ({ user }) => {
 
           <div className='section-header'>LITTERBOX EVENTS</div>
           <div className="trigger-container">
-            <div>{triggerList?.map((trigger) => (
+            <Table paginationRows={10} />
+            {/* <div>{triggerList?.map((trigger) => (
               <div key={trigger.id} className="trigger-entry">
                 <div>ACTION: {trigger.action}</div>
-                <div>TRIGGERED: {trigger.createdAt}</div>
+                <div>TRIGGERED: {trigger.date}</div>
+                <div>TRIGGERED: {trigger.date}</div>
               </div>
             ))}
 
-              <button className="button-lg" onClick={triggerEdit}>EDIT TRIGGERS</button>
+              
 
-            </div>
+            </div> */}
+            <button className="button-lg" onClick={triggerEdit}>EDIT TRIGGERS</button>
           </div>
         </div>
       </div>

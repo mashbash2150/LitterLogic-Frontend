@@ -15,8 +15,9 @@ import Devices from './pages/Devices'
 import Dashboard from './components/Dashboard'
 import UserContext from './UserContext'
 import Header from './components/Header'
+import TriggerDetails from './pages/TriggerDetails'
 
-//export const UserContext=React.createContext()
+
 
  const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -59,9 +60,8 @@ import Header from './components/Header'
 <Route path="/cats" element={<Cats user={user}/>}/>
 <Route path="/cats/add" element={<AddCat user={user}/>}/>
 <Route path="/devices" element={<Devices/>}/>
+<Route path="/triggers/details/:trigger_id" element={<TriggerDetails/>}/>
 <Route path="/triggers/:cat_id" element={<Triggers/>}/>
-
-
         </Routes>
       </div>
      
