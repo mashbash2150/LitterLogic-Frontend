@@ -14,12 +14,22 @@ body {
 
 
 .cat-container {
-
-  border: 2px solid black;
+  background-color: rgba(194, 242, 48, 0.877);
+  border-radius: 15px;
+  width: 600px;
+  font-size: 2vh;
   margin: 5vh;
   text-align: center;
+  padding: 4vh;
 }
 
+.trigger-entry div {
+  padding: 10px;
+}
+
+.cat-name {
+  font-size: 3vh;
+}
 
 .page-title {
   font-size: 6vh;
@@ -43,6 +53,7 @@ body {
   margin-top: 5vh;
   font-size: 2vh;
   text-align: center;
+  font-style: italic;
 }
 
 
@@ -68,6 +79,7 @@ body {
   justify-content: space-evenly;
   margin-top: 5vh;
 
+
 }
 
 .dash-title {
@@ -78,15 +90,17 @@ body {
 .dash-section,
 .device-section {
 
-  width: 600px;
+  width: 700px;
   height: 300px;
   text-align: center;
-  border: 2px solid black;
+  font-size: 3vh;
   margin-bottom: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgba(194, 242, 48, 0.877);
+  border-radius: 15px;
 }
 
 .section-header {
@@ -103,6 +117,7 @@ body {
   font-size: 2vh;
   margin-top: 2vh;
   padding: 2vh;
+  border-radius: 10px;
 }
 
 .stats {
@@ -121,6 +136,35 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5vh;
+
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+
+}
+
+.button-lg {
+  border: none;
+  padding: 1vh;
+  border-radius: 5px;
+  margin-top: 0vh;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+}
+
+table {
+  border: 2px solid black;
+  font-size: 2vh;
 }
 
 .header-img {
@@ -216,6 +260,49 @@ input {
 
   grid-column: 2/3;
   font-size: 5vh;
-
+  font-style: italic;
 
 }
+
+/* .tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+
+}
+
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top;
+
+}
+
+.tg-0lax {
+  width: 100px;
+}
+
+.tg-test {
+  width: 150px;
+} */

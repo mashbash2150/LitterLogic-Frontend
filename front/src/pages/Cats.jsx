@@ -27,8 +27,10 @@ const Cats = ({ user }) => {
   const getCatTriggers = async (arg) => {
     console.log(catList)
     const res = await axios.get(`${BASE_URL}/triggers/${arg}`)
-    console.log('triggers', res.data)
-    setTriggerList(res.data)
+    const newArr = res.data.map((trig) => (
+      trig.createdAt.split(/T|\./).slice(0, 2)))
+    console.log("newARr", newArr)
+    setTriggerList(newArr)
   }
 
   const getCatId = (selected) => {
@@ -47,13 +49,11 @@ const Cats = ({ user }) => {
   return (
     <div className="pets-container">
       <div className='section-header'>ACTIVE PETS </div>
-      <Link to={'/cats/add'}>
-        <button>ADD PET</button>
-      </Link>
+
       <div >
         <div>{catList?.map((cat) => (
           <div key={cat.id} className="cat-container" onClick={() => getCatId(cat.id)}>
-            <div>NAME {cat.name}</div>
+            <div className="cat-name">{cat.name}</div>
             <div>BIRTHDAY {cat.birthday}</div>
             <div>WEIGHT {cat.weight}</div>
             {/* <div>HEALTH CONDITIONS {cat.healthConditions?.map((condition) => (
@@ -64,22 +64,26 @@ const Cats = ({ user }) => {
 
 
         ))}
+          <div className="events-container">
+            <Link to={'/cats/add'}>
+              <button className="button-lg">ADD PET</button>
+            </Link>
+
+          </div>
 
 
-        </div>
+          <div className='section-header'>LITTERBOX EVENTS</div>
+          <div className="trigger-container">
+            <div>{triggerList?.map((trigger) => (
+              <div key={trigger.id} className="trigger-entry">
+                <div>ACTION: {trigger.action}</div>
+                <div>TRIGGERED: {trigger.createdAt}</div>
+              </div>
+            ))}
 
-        <div className='section-header'>LITTERBOX EVENTS</div>
-        <div className="trigger-container">
-          <div>{triggerList?.map((trigger) => (
-            <div key={trigger.id} className="trigger-entry">
-              <div>ACTION: {trigger.action}</div>
-              <div>TRIGGERED: {trigger.createdAt}</div>
+              <button className="button-lg" onClick={triggerEdit}>EDIT TRIGGERS</button>
+
             </div>
-          ))}
-
-            <button onClick={triggerEdit}>EDIT TRIGGERS</button>
-
-
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
+import LineChart from '../charts/LineChart'
 
 const Triggers = () => {
 
@@ -19,19 +20,22 @@ const Triggers = () => {
   //   ]
   // })
 
-  const parseTimeStamps = (arg) => {
-    arg.map((trig) => (
-      trig.createdAt.split(/T|\./).slice(0, 2)))
-  }
+  // const parseTimeStamps = (arg) => {
+  //   arg.map((trig) => (
+  //     trig.createdAt.split(/T|\./).slice(0, 2)))
+  // }
 
 
 
   const getCatTriggers = async () => {
 
     const res = await axios.get(`${BASE_URL}/triggers/${cat_id}`)
-
+    // const newArr = res.data.map((trig) => (
+    //   trig.createdAt.split(/T|\./).slice(0, 2)))
+    // console.log("newARr", newArr)
     setTriggerList(res.data)
-    setDtArray(parseTimeStamps(triggerList))
+
+    // setDtArray(parseTimeStamps(triggerList))
 
   }
 
@@ -58,13 +62,16 @@ const Triggers = () => {
         <div>{triggerList?.map((trigger) => (
 
           <div key={trigger.id} className="trigger-entry">
-            <div>TRIGGERED: {trigger.createdAt}</div>
+            <div>DATE: {trigger.date.substring(0, trigger.date.lastIndexOf('T'))}</div>
+            <div>TIME: {trigger.time}</div>
             <div>{trigger.action.toUpperCase()}</div>
 
             <button className="del-button" onClick={() => deleteTrigger(trigger.id)}>x</button>
           </div>
         ))}
-
+          <div >
+            {/* <LineChart /> */}
+          </div>
 
 
 

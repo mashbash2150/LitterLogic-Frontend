@@ -53,7 +53,7 @@ import Header from './components/Header'
         <Routes>
 <Route path="/" element={<Home authenticated={authenticated} user={user}/>}/>
 <Route path="/dashboard" element={<Dashboard authenticated={authenticated} user={user}/>}/>
-<Route path="/login" element={<SignIn setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>}/>
+<Route path="/login" element={<SignIn user={user} setUser={setUser} toggleAuthenticated={toggleAuthenticated}/>}/>
 <Route path="/register" element={<Register/>}/>
 <Route path="/about" element={<About/>}/>
 <Route path="/cats" element={<Cats user={user}/>}/>
