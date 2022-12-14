@@ -40,8 +40,8 @@ const TriggerDash = () => {
 
 
   return (
-    <div>TriggerDash
-      <Table paginationRows={5} getRecent={true} theme="dark" />
+    <div className="table-container">
+      <Table className="table" paginationRows={5} getRecent={true} theme="dark" />
     </div>
   )
 }

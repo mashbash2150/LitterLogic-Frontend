@@ -6,7 +6,7 @@ import Dashboard from '../components/Dashboard'
 
 
 const Home = ({ user }) => {
-  const images = ["https://i.imgur.com/8tTtPv4.png", "https://images.unsplash.com/photo-1548403119-4f9f60f7c064?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80", "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80"]
+  const images = ["https://i.imgur.com/8tTtPv4.png", "https://imgur.com/Ox7Me25"]
   const carosel = document.querySelector(".carosel")
   const interval = setInterval(() => {
     //startCarosel();

@@ -32,14 +32,14 @@ const Table = ({ paginationRows, getRecent }) => {
 
 
   ]
-  const conditionalRowStyles = [
-    {
-      when: row => row.action == "enter",
-      style: {
-        backgroundColor: "lightgrey"
-      }
-    }
-  ]
+  // const conditionalRowStyles = [
+  //   {
+  //     when: row => row.action == "enter",
+  //     style: {
+  //       backgroundColor: "lightgrey"
+  //     }
+  //   }
+  // ]
 
   const getCatTriggers = async () => {
     //conditionally rendering smaller list if Component is rendered through dashboard (and thus getREcent prop passed in is true)
@@ -78,19 +78,22 @@ const Table = ({ paginationRows, getRecent }) => {
     <div>
       <DataTable
         className='data-table'
-        theme="dark"
+        theme="solarize"
         title="RECENT ACTIVITY"
         columns={columns}
         data={triggerList}
         pagination
+        striped
         responsive={true}
         hightlightOnHover={true}
         pointerOnHover={true}
         persistTableHead={true}
         defaultSortAsc={false}
         defaultSortFieldId="2"
+        noHeader
+
         paginationPerPage={paginationRows}
-        conditionalRowStyles={conditionalRowStyles}
+        //conditionalRowStyles={conditionalRowStyles}
         onRowClicked={(row, onClick) => { getTrigger(row.id) }}
 
       />

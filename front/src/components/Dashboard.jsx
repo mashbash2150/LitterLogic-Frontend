@@ -23,7 +23,7 @@ const Dashboard = ({ user }) => {
         </div>
       </div>
       <div className="dash-title">RECENT ACTIVITY</div>
-      <div className="dash-section">
+      <div className="table-section">
         <div>
           <TriggerDash user={user} />
         </div>
