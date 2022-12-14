@@ -16,7 +16,7 @@ const Dashboard = ({ user }) => {
 
   return (
     <div className="dash-container">
-      <div className="dash-title">PETS</div>
+      <div className="dash-title">MY CAT</div>
       <div className="dash-section">
         <div>
           <CatDash user={user} />

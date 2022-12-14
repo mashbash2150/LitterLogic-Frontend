@@ -32,8 +32,9 @@ const Register = () => {
   }
   return (
     <div className="form-container">
-      <form onSubmit={handleSubmit}>
-        <div className="form">
+      <div>
+        <form onSubmit={handleSubmit}>
+
           <label className="label" htmlFor="firstName">First Name</label>
           <input
             className="input"
@@ -54,6 +55,7 @@ const Register = () => {
             value={formValues.lastName}
             required
           />
+          <label className="label" htmlFor="email">Email</label>
           <input
             className="input"
             onChange={handleChange}
@@ -90,8 +92,9 @@ const Register = () => {
           >
             CREATE ACCOUNT
           </button>
-        </div>
-      </form>
+
+        </form>
+      </div>
 
 
 

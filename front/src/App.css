@@ -12,15 +12,26 @@ body {
   font-family: 'Rajdhani', sans-serif;
 }
 
-
+.cat-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border: 2px dashed black;
+  border-radius: 15px;
+}
 
 .cat-container {
-  background-color: rgba(194, 242, 48, 0.877);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 15px;
   width: 600px;
   font-size: 2vh;
   margin: 5vh;
-  text-align: center;
+  text-align: left;
   padding: 4vh;
 }
 
@@ -37,6 +48,17 @@ body {
 .home .large {
   font-size: 5vw;
   margin: 2vh;
+  text-shadow: 0px 0 15px #eded0dd2;
+}
+
+.home-buttons button {
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  background-color: rgba(221, 217, 84, 0.895);
+  cursor: pointer;
+
 }
 
 .p-flex-short p {
@@ -136,7 +158,8 @@ body {
 }
 
 .cat-name {
-  font-size: 3vh;
+  font-size: 4vh;
+  text-align: center;
 }
 
 .page-title {
@@ -208,8 +231,14 @@ body {
 
 }
 
+.dash-container .dash-title {
+  align-self: flex-start;
+  margin-left: 15px;
+}
+
 .dash-title {
-  font-size: 2.5vh;
+  font-size: 3.5vh;
+  text-shadow: 0px 0 15px #eded0dd2;
 
 }
 
@@ -317,11 +346,44 @@ form {
   flex-direction: column;
   align-items: center;
   margin-top: 3vh;
+
 }
+
+.dash-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+
+}
+
 
 input {
   margin-bottom: 2vh;
+  width: 250px;
+  height: 30px;
 
+}
+
+label {
+  margin-bottom: 2vh;
+  font-size: 3vh;
+
+
+}
+
+button {
+  padding: 10px;
+  border: none;
+  font-size: 2vh;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .charts {
@@ -397,7 +459,7 @@ input {
 .image-container img {
   width: 350px;
   height: 268px;
-
+  object-fit: cover;
   border-radius: 20px;
 
 

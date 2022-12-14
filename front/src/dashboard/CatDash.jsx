@@ -26,16 +26,19 @@ const CatDash = ({ user }) => {
   }, [])
 
   return (
-    <div>
+    <div className="cat-container">
+
       <div>{catList?.map((cat) => (
-        <div key={cat.id} className="cat-container">
+        <div key={cat.id} className="cat-stats" >
           <div className="cat-name">{cat.name}</div>
           <div>BIRTHDAY {cat.birthday}</div>
           <div>WEIGHT {cat.weight}</div>
           <div>NOTES {cat.notes}</div>
+
           <div></div>
         </div>))}
       </div>
+      <img className="dash-img" src="https://github.com/mashbash2150/LitterLogic-Frontend/blob/main/images/IMG_9300.jpg?raw=true" alt='feta' />
     </div>
   )
 }
