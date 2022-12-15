@@ -20,7 +20,7 @@ const TriggerDash = () => {
 
   const getCatTriggers = async () => {
     if (catId) {
-      const res = await axios.get(`${BASE_URL}/triggers/2`)
+      const res = await axios.get(`${BASE_URL}/triggers/3`)
       console.log('triggers', res.data)
       setTriggerList(res.data.slice(0, 6))
     } else {

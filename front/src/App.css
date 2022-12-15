@@ -26,7 +26,7 @@ body {
 .insight {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 200px;
   height: 100px;
@@ -35,12 +35,19 @@ body {
   border-radius: 15px;
   font-size: 3vh;
   margin: 5px;
-  text-shadow: 0px 0 15px #dfdf8fd2;
+  text-shadow: 0px 0 10px #777774d2;
 }
 
 .adv {
   font-size: 2.5vh;
   text-align: center;
+  font-weight: 900;
+}
+
+.about img {
+  width: 300px;
+  height: 450px;
+  border-radius: 15px
 }
 
 .col-box {
@@ -86,7 +93,7 @@ body {
 .home .large {
   font-size: 5vw;
   margin: 2vh;
-  text-shadow: 0px 0 15px #e1e1cad2;
+  text-shadow: 0px 0 10px #777774d2;
 }
 
 .largest {
@@ -130,7 +137,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-color: rgba(193, 242, 48, 0.552);
+  background-color: rgba(219, 225, 200, 0.877);
   border-radius: 15px;
   padding: 20px;
 
@@ -158,11 +165,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 250px;
-  background-color: rgba(193, 242, 48, 0.552);
+  background-color: rgba(219, 225, 200, 0.877);
   border-radius: 15px;
   padding: 10px;
   margin: 0 20px 0 20px;
-  text-shadow: 0px 0 15px #eded0dd2;
+  text-shadow: 0px 0 10px #777774d2;
 
   ;
 
@@ -171,7 +178,7 @@ body {
 
 .short {
   font-size: 4vh;
-  text-shadow: 0px 0 15px #eded0dd2;
+  text-shadow: 0px 0 10px #777774d2;
 }
 
 .trigger-entry div {
@@ -183,6 +190,7 @@ body {
   height: 300px;
   text-align: center;
   opacity: 0.7;
+  margin-top: 4vh;
 }
 
 .table {
@@ -281,7 +289,7 @@ body {
 
 .dash-title {
   font-size: 3.5vh;
-  text-shadow: 0px 0 15px #eded0dd2;
+  text-shadow: 0px 0 10px #777774d2;
 
 }
 
@@ -310,7 +318,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(194, 242, 48, 0.877);
+  background-color: rgba(219, 225, 200, 0.877);
   border-radius: 15px;
 }
 
@@ -336,7 +344,8 @@ body {
 
 }
 
-.trigger-container {
+.trigger-container,
+.profile-container {
   display: flex;
   flex-direction: column;
   margin-top: 4vh;
@@ -345,7 +354,8 @@ body {
 
 }
 
-.pets-container {
+.pets-container,
+.profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -356,6 +366,8 @@ body {
 
 }
 
+
+
 .profile button {
   margin: 5px;
 
@@ -365,7 +377,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
   text-align: center;
   font-size: 4vh;
 }
@@ -384,9 +396,9 @@ body {
 }
 
 .del-button {
-  padding: 0;
-  font-size: 1vh;
-  background-color: red;
+  margin: 10px;
+  font-size: 1.5vh;
+  color: red
 }
 
 .button {

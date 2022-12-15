@@ -23,18 +23,19 @@ const Dashboard = ({ user }) => {
           <CatDash user={user} />
         </div>
       </div>
-      <div className="dash-title">RECENT ACTIVITY</div>
-      <div className="table-section">
-        <div>
-          <TriggerDash user={user} />
-        </div>
-      </div>
       <div className="dash-title">INSIGHTS</div>
       <div className="dash-section">
         <div>
           <InsightsDash user={user} />
         </div>
       </div>
+      <div className="dash-title">RECENT ACTIVITY</div>
+      <div className="table-section">
+        <div>
+          <TriggerDash user={user} />
+        </div>
+      </div>
+
 
 
 

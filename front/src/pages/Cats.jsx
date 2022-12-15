@@ -47,7 +47,7 @@ const Cats = ({ user }) => {
     // getCatTriggers(selected)
   }
   const triggerEdit = () => {
-    navigate(`/triggers/2`)
+    navigate(`/triggers/3`)
     // getCatTriggers(selected)
   }
 
@@ -57,14 +57,14 @@ const Cats = ({ user }) => {
   }, [catId])
   return (
     <div className="pets-container">
-      <div className="add">
+      {/* <div className="add">
         <div>Adding a New Pet? </div>
         <Link to={'/cats/add'}>
           <button className="button">ADD PET</button>
         </Link>
 
 
-      </div>
+      </div> */}
       <div className='dash-title'>MY CAT</div>
       <CatDash catList={catList} />
       <div >
@@ -87,8 +87,8 @@ const Cats = ({ user }) => {
         </div>
 
 
-        <div className='section-header'>LITTERBOX EVENTS</div>
-        <div className="trigger-container">
+        <div className='dash-title'>LITTERBOX EVENTS</div>
+        <div className="table-container">
           <Table paginationRows={10} getRecent={false} />
           {/* <div>{triggerList?.map((trigger) => (
               <div key={trigger.id} className="trigger-entry">

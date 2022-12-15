@@ -5,8 +5,10 @@ import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
 import DataTable from "react-data-table-component"
 import LineChart from '../charts/LineChart'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Triggers = () => {
+  let navigate = useNavigate();
 
   let { cat_id } = useParams()
   const [triggerList, setTriggerList] = useState([])
@@ -48,7 +50,7 @@ const Triggers = () => {
 
   const getCatTriggers = async () => {
 
-    const res = await axios.get(`${BASE_URL}/triggers/2`)
+    const res = await axios.get(`${BASE_URL}/triggers/3`)
     // const newArr = res.data.map((trig) => (
     //   trig.createdAt.split(/T|\./).slice(0, 2)))
     // console.log("newARr", newArr)
@@ -66,6 +68,11 @@ const Triggers = () => {
     setDeleted(true)
   }
 
+  const triggerEdit = (arg) => {
+    navigate(`/triggers/details/${arg}`)
+    // getCatTriggers(selected)
+  }
+
   useEffect(() => {
 
     getCatTriggers()
@@ -76,17 +83,19 @@ const Triggers = () => {
 
 
 
-      <div className='section-header'>LITTERBOX EVENTS</div>
+      <div className='section-header'></div>
       <div className="trigger-container">
         <div>{triggerList?.map((trigger) => (
 
           <div key={trigger.id} className="trigger-entry">
+            <div>{trigger.action.toUpperCase()}</div>
             <div>DATE: {trigger.date.substring(0, trigger.date.lastIndexOf('T'))}</div>
             <div>TIME: {trigger.time}</div>
             {/* <div>TIME: {Date(Date.parse(trigger.createdAt)).substring(16, 24)}</div> */}
-            <div>{trigger.action.toUpperCase()}</div>
 
-            <button className="del-button" onClick={() => deleteTrigger(trigger.id)}>x</button>
+
+            <button className="del-button" onClick={() => triggerEdit(trigger.id)}>Edit</button>
+            <button className="del-button" onClick={() => deleteTrigger(trigger.id)}>Delete</button>
           </div>
         ))}
           <div >

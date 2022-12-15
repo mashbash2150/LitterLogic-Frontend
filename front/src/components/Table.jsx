@@ -77,7 +77,7 @@ const Table = ({ paginationRows, getRecent }) => {
     const day = parseInt(currentDate.getDate())
     console.log("today is", day, "hour (-6) is", hrs)
     console.log("hours", hrs)
-    const res = await axios.get(`${BASE_URL}/triggers/2`)
+    const res = await axios.get(`${BASE_URL}/triggers/3`)
     if (getRecent == true) {
       const recent = res.data.filter((trig) => {
         if (parseInt(trig.createdAt.substring(8, 10)) === day) {

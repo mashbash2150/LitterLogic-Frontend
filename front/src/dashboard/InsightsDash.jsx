@@ -37,16 +37,16 @@ const InsightsDash = () => {
     <div className="cat-container">
 
       <div className="col-box">
-        <div className="insight">Daily Avg visits this week</div>
+        <div className="insight">Daily visits this week <br></br>(avg)</div>
         <div className="avg">5.9</div>
       </div>
       <div className="col-box">
-        <div className="insight">Daily Avg visits this month</div>
+        <div className="insight">Daily visits this month <br></br>(avg)</div>
         <div className="avg">7.3</div>
       </div>
       <div className="col-box">
         <div className="insight">Trends</div>
-        <div className="adv">Lower than Average <br></br>Is your cat getting enough water?</div>
+        <div className="adv">LOWER THAN AVERAGE <br></br>Is your cat getting enough water?</div>
       </div>
     </div >
   )

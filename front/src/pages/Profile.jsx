@@ -37,10 +37,10 @@ const Profile = ({ user }) => {
   }, [])
 
   return (
-    <div>
-      <div>Profile</div>
+    <div className="profile-container">
+      <div className='dash-title'>Profile</div>
 
-      <div className="profile">Cats
+      <div className="profile device-section">My Cats
         <buttons>
 
           <div></div>
@@ -52,7 +52,7 @@ const Profile = ({ user }) => {
           <button onClick={() => deleteCat()}>Remove Cat</button>
         </buttons>
       </div>
-
+      <div className="profile">My Devices</div>
       <Devices />
     </div>
   )
