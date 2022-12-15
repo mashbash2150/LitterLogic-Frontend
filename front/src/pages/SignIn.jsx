@@ -46,7 +46,7 @@ const Login = ({ toggleAuthenticated, setUser, user }) => {
             value={formValues.password}
             required
           />
-          <button disabled={!formValues.email || !formValues.password}>
+          <button className="button" disabled={!formValues.email || !formValues.password}>
             Sign In
           </button>
         </form>

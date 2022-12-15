@@ -6,7 +6,7 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 15px;
   height: 100vh;
   background: rgb(117, 196, 193);
   font-family: 'Rajdhani', sans-serif;
@@ -16,23 +16,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 200px;
+  align-items: flex-start;
+  width: 250px;
   height: 200px;
-  border: 2px dashed black;
+
   border-radius: 15px;
 }
 
 .cat-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 15px;
-  width: 600px;
+  width: 650px;
   font-size: 2vh;
-  margin: 5vh;
+  margin: 5vh 0 5vh 0;
   text-align: left;
+  background-color: rgba(194, 242, 48, 0.877);
   padding: 4vh;
+
+
+
 }
 
 .home {
@@ -51,6 +55,12 @@ body {
   text-shadow: 0px 0 15px #eded0dd2;
 }
 
+.largest {
+  font-size: 7vw;
+  margin: 2vh;
+  text-shadow: 0px 0 15px #eded0dd2;
+}
+
 .home-buttons button {
   padding: 10px;
   border: none;
@@ -61,13 +71,7 @@ body {
 
 }
 
-.p-flex-short p {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-
-}
 
 .p-img {
   margin-right: 20px;
@@ -103,7 +107,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+
 
 }
 
@@ -111,9 +115,12 @@ body {
   width: 350px;
 }
 
+
+
 .p-flex-short p {
   display: flex;
-  width: 400px;
+  flex-direction: column;
+  width: 390px;
   justify-content: center;
   align-items: center;
   height: 250px;
@@ -121,7 +128,7 @@ body {
   border-radius: 15px;
   padding: 10px;
   margin: 0 20px 0 20px;
-  line-height: 30px;
+
   ;
 
 
@@ -242,10 +249,24 @@ body {
 
 }
 
-.dash-section,
-.device-section {
-  width: 700px;
+
+/* .dash-section {
+  width: 650px;
   height: 300px;
+  text-align: center;
+  font-size: 3vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(194, 242, 48, 0.877);
+  border-radius: 15px;
+} */
+
+.device-section {
+  width: 500px;
+  height: 200px;
   text-align: center;
   font-size: 3vh;
   margin-bottom: 5vh;
@@ -276,6 +297,7 @@ body {
 
 .stats {
   font-size: 3vh;
+
 }
 
 .trigger-container {
@@ -289,8 +311,9 @@ body {
 .pets-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 5vh;
+  align-items: flex-start;
+  margin-left: 20px;
+
 
 }
 
@@ -302,7 +325,13 @@ body {
 
 }
 
-.button-lg {
+.del-button {
+  padding: 0;
+  font-size: 1vh;
+  background-color: red;
+}
+
+.button {
   border: none;
   padding: 1vh;
   border-radius: 5px;
@@ -350,10 +379,12 @@ form {
 }
 
 .dash-img {
-  width: 200px;
+  width: 250px;
   height: 200px;
   object-fit: cover;
+
   border-radius: 15px;
+  opacity: 0.7;
 }
 
 .form {

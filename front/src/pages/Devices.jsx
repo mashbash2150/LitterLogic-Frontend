@@ -8,7 +8,7 @@ const Devices = () => {
       <div className="device-section">
 
         Register Device
-        <FontAwesomeIcon icon="fa-solid fa-tachograph-digital" />
+
       </div>
       <div className="device-section">
         Calibrate

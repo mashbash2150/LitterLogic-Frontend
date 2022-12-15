@@ -83,7 +83,7 @@ const Register = () => {
             value={formValues.confirmPassword}
             required
           />
-          <button
+          <button className="button"
             disabled={
               !formValues.email ||
               (!formValues.password &&

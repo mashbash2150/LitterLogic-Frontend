@@ -5,6 +5,8 @@ import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Table from '../components/Table'
+import CatDash from '../dashboard/CatDash'
+
 
 
 const Cats = ({ user }) => {
@@ -55,11 +57,17 @@ const Cats = ({ user }) => {
   }, [catId])
   return (
     <div className="pets-container">
-      <div className='section-header'>ACTIVE PETS </div>
 
+      <div>Adding a New Pet? </div>
+      <Link to={'/cats/add'}>
+        <button className="button">ADD PET</button>
+      </Link>
+      <CatDash catList={catList} />
       <div >
+        <div className='dash-title'>MY CAT</div>
+        {/* 
         <div>{catList?.map((cat) => (
-          <div key={cat.id} className="cat-container" onClick={() => getCatId(cat.id)}>
+          <div key={cat.id} className="cat-stats" onClick={() => getCatId(cat.id)}>
             <div className="cat-name">{cat.name}</div>
             <div>BIRTHDAY {cat.birthday}</div>
             <div>WEIGHT {cat.weight}</div>
@@ -68,20 +76,17 @@ const Cats = ({ user }) => {
             <div></div>
           </div>
 
-
-        ))}
-          <div className="events-container">
-            <Link to={'/cats/add'}>
-              <button className="button-lg">ADD PET</button>
-            </Link>
-
-          </div>
+        ))} */}
+        <div className="events-container">
 
 
-          <div className='section-header'>LITTERBOX EVENTS</div>
-          <div className="trigger-container">
-            <Table paginationRows={10} getRecent={false} />
-            {/* <div>{triggerList?.map((trigger) => (
+        </div>
+
+
+        <div className='section-header'>LITTERBOX EVENTS</div>
+        <div className="trigger-container">
+          <Table paginationRows={10} getRecent={false} />
+          {/* <div>{triggerList?.map((trigger) => (
               <div key={trigger.id} className="trigger-entry">
                 <div>ACTION: {trigger.action}</div>
                 <div>TRIGGERED: {trigger.date}</div>
@@ -92,11 +97,11 @@ const Cats = ({ user }) => {
               
 
             </div> */}
-            <button className="button-lg" onClick={triggerEdit}>EDIT TRIGGERS</button>
-          </div>
+          <button className="button-lg" onClick={triggerEdit}>EDIT TRIGGERS</button>
         </div>
       </div>
     </div>
+    // </div>
   )
 }
 

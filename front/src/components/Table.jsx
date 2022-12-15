@@ -10,13 +10,14 @@ import LineChart from '../charts/LineChart'
 
 
 const Table = ({ paginationRows, getRecent }) => {
-  const Button = () => <button type="button">Delete Trigger</button>;
+  const Button = () => <button className="del-button" type="button" onClick={(arg) => deleteTrigger(arg.id)}>Delete Trigger</button>;
   let { cat_id } = useParams()
   let navigate = useNavigate()
   const [triggerList, setTriggerList] = useState([])
   const [perPage, setPerPage] = useState(5)
+  const [deleted, setDeleted] = useState(false)
   const currentDate = new Date()
-  const normDate = new Date(Date.parse())
+  const normDate = new Date()
   // const sortIcon = <ArrowDownward />;
 
   const columns = [
@@ -25,17 +26,20 @@ const Table = ({ paginationRows, getRecent }) => {
       selector: (row) => row.action.toUpperCase()
     },
     {
-      name: "Day",
-      selector: (row) => Date(Date.parse(row.createdAt)).substring(0, 3)
-      //row.createdAt.substring(0, row.date.lastIndexOf('T'))
-    },
-    {
       name: "Date",
       selector: (row) => row.date.substring(0, row.date.lastIndexOf('T'))
+      //selector: (row) => Date.parse(row.createdAt).substring(0, 3)
+      //row.createdAt.substring(0, row.date.lastIndexOf('T'))
     },
+    // {
+    //   name: "Date",
+    //   selector: (row) => Date(Date.parse(row.createdAt))
+    //   //row.date.substring(0, row.date.lastIndexOf('T'))
+    // },
     {
       name: "Time",
-      selector: (row) => normDate(row.createdAt)
+      selector: (row) => row.time
+      // Date.getUTCHours(row.createdAt) + ":" + Date.getUTCMinutes(row.createdAt) + ":" + Date.getUTCSeconds(row.createdAt)
       // Date(Date.parse(row.createdAt)).substring(16, 24)
 
       //normDate.getUTCHours(Date.parse(row.createdAt))
@@ -45,7 +49,7 @@ const Table = ({ paginationRows, getRecent }) => {
     {
       name: '',
       button: true,
-      cell: (row) => <Button onClick={() => deleteTrigger(row.id)}>Delete Entry</Button>,
+      cell: (row) => <Button arg={row.id} >Delete Entry</Button>,
     },
 
 
@@ -62,9 +66,11 @@ const Table = ({ paginationRows, getRecent }) => {
   // ]
 
 
+
+
   const getCatTriggers = async () => {
     const theDate = new Date(Date.parse("2022-12-14T14:27:27.642Z"))
-    console.log("thedate", theDate(Date.parse("2022-12-14T14:27:27.642Z")))
+    console.log("thedate", theDate)
 
     //conditionally rendering smaller list if Component is rendered through dashboard (and thus getREcent prop passed in is true)
     const hrs = parseInt(currentDate.getHours()) - 6
@@ -98,14 +104,20 @@ const Table = ({ paginationRows, getRecent }) => {
   }
 
   const deleteTrigger = async (arg) => {
+
+    setDeleted(false)
+
     alert("Are you sure you want to delete this entry?")
-    const res = await axios.get(`${BASE_URL}/triggers/actions/${arg}`)
+    // const response = await axios.delete(`http://localhost:3001/api/makers/${id}/projects/${arg}`)
+    const response = await axios.delete(`${BASE_URL}/triggers/actions/${arg}`)
+    setDeleted(true)
   }
+
 
   useEffect(() => {
 
     getCatTriggers()
-  }, [])
+  }, [deleted])
   return (
     <div>
       <DataTable

@@ -9,25 +9,29 @@ import Chart from '../charts/Chart'
 import LineChart from '../charts/LineChart'
 
 const CatDash = ({ user }) => {
+  let navigate = useNavigate();
 
   const [catList, setCatList] = useState([])
 
 
   const getUserCats = async () => {
     console.log(user)
-    const res = await axios.get(`${BASE_URL}/cats/${user.id}`)
+    const res = await axios.get(`${BASE_URL}/cats/1`)
     console.log('userlistingcats', res.data)
     setCatList(res.data)
   }
 
+  const goToCat = () => {
+    navigate("/cats")
+  }
   useEffect(() => {
     getUserCats()
 
   }, [])
 
   return (
-    <div className="cat-container">
-
+    <div onClick={goToCat} className="cat-container">
+      <img className="dash-img" src="https://github.com/mashbash2150/LitterLogic-Frontend/blob/main/images/IMG_9300.jpg?raw=true" alt='feta' />
       <div>{catList?.map((cat) => (
         <div key={cat.id} className="cat-stats" >
           <div className="cat-name">{cat.name}</div>
@@ -38,7 +42,7 @@ const CatDash = ({ user }) => {
           <div></div>
         </div>))}
       </div>
-      <img className="dash-img" src="https://github.com/mashbash2150/LitterLogic-Frontend/blob/main/images/IMG_9300.jpg?raw=true" alt='feta' />
+
     </div>
   )
 }

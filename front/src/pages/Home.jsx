@@ -63,14 +63,15 @@ const Home = ({ user }) => {
     <div >
       <div className="home">
 
-        <div className="large" >Cats. Love. Boxes.</div>
-        <div className="short">Who says their owners can't love them too?</div>
+        <div className="largest" >Cats. Love. Boxes. </div>
+        <div className="short">Who says their owners can't too?</div>
+        {/* <div className="short">* Enter LitterLogic * </div> */}
         <div>
           <div className='p-flex-long'>
-            <p>  <span className="emph" >Enter Litterlogic. </span>Low profile, low voltage sensors relay information to the Litterlogic platform, where addional insights are provided on your cat's litterbox usage.</p>
+            <p>  <span className="emph" >Simple + Smart Solutions</span>Litterlogic tracks your cat's litterbox habits by engaging low voltage, wifi-connected sensors that feed movement data into to the User platform, providing addional insights on your cat's health and wellbeing.</p>
           </div>
           <div className='p-flex-short'>
-            <p><span className="emph" >Customizable + Fun </span>Optional device add ons can enhance the experience by triggering anything from exhaust fans, to customized illuminated signs.</p>
+            <p><span className="emph" >Customizable + Fun </span>Optional device add-ons from exhaust fans to customizable illuminated signs can be configured on request.</p>
             <div className="slide-container p-img">
               <Fade>
                 {fadeImages.map((fadeImage, index) => (
@@ -87,7 +88,7 @@ const Home = ({ user }) => {
           </div>
           <div className="p-flex-long">
 
-            <p><span className="emph" >Informative + Easy </span>Whether you're looking out for your cat's health by monitoring their habits, simply want to embrace smart home features, Litterlogic might have you calling yourself a box-lover too.</p>
+            <p><span className="emph" >Informative + Easy </span>Whether you're looking out for your cat's health by monitoring their habits, or simply want to embrace the advantages of smart home automation, Litterlogic might have you calling yourself a box-lover too.</p>
           </div>
         </div>
         <div className="large">DISCOVER SMART PET MONITORING<br></br>FOR YOURSELF</div>
