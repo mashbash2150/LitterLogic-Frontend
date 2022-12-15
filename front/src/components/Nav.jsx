@@ -9,8 +9,9 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
     authOptions = (
       <div>
         <NavLink to='/dashboard'>HOME</NavLink>
-        <NavLink to='/cats'>PETS</NavLink>
-        <NavLink to='/devices'>DEVICES</NavLink>
+        <NavLink to='/cats'>PET DATA</NavLink>
+
+        <NavLink to='/profile'>PROFILE</NavLink>
         <NavLink to='/about'>ABOUT</NavLink>
         <NavLink onClick={handleLogOut} to='/'>LOG OUT</NavLink>
         <img className="header-img" src="https://i.imgur.com/aSdUiH9.png" alt="" />

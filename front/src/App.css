@@ -23,6 +23,40 @@ body {
   border-radius: 15px;
 }
 
+.insight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-size: 3vh;
+  margin: 5px;
+  text-shadow: 0px 0 15px #dfdf8fd2;
+}
+
+.adv {
+  font-size: 2.5vh;
+  text-align: center;
+}
+
+.col-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+}
+
+.avg {
+  font-size: 7vh;
+  text-align: center;
+}
+
 .cat-container {
   display: flex;
   justify-content: space-evenly;
@@ -32,7 +66,7 @@ body {
   font-size: 2vh;
   margin: 5vh 0 5vh 0;
   text-align: left;
-  background-color: rgba(194, 242, 48, 0.877);
+  background-color: rgba(219, 225, 200, 0.877);
   padding: 4vh;
 
 
@@ -52,13 +86,13 @@ body {
 .home .large {
   font-size: 5vw;
   margin: 2vh;
-  text-shadow: 0px 0 15px #eded0dd2;
+  text-shadow: 0px 0 15px #e1e1cad2;
 }
 
 .largest {
   font-size: 7vw;
   margin: 2vh;
-  text-shadow: 0px 0 15px #eded0dd2;
+
 }
 
 .home-buttons button {
@@ -128,6 +162,7 @@ body {
   border-radius: 15px;
   padding: 10px;
   margin: 0 20px 0 20px;
+  text-shadow: 0px 0 15px #eded0dd2;
 
   ;
 
@@ -135,7 +170,8 @@ body {
 }
 
 .short {
-  font-size: 3.5vh;
+  font-size: 4vh;
+  text-shadow: 0px 0 15px #eded0dd2;
 }
 
 .trigger-entry div {
@@ -302,8 +338,9 @@ body {
 
 .trigger-container {
   display: flex;
+  flex-direction: column;
   margin-top: 4vh;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
 }
@@ -311,10 +348,31 @@ body {
 .pets-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: 20px;
+  align-items: center;
+  margin-top: 10vh;
+  text-align: center;
 
 
+
+}
+
+.profile button {
+  margin: 5px;
+
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  text-align: center;
+  font-size: 4vh;
+}
+
+.add {
+  font-size: 2.5vh;
+  margin-bottom: 10vh;
 }
 
 .events-container {

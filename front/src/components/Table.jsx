@@ -107,7 +107,7 @@ const Table = ({ paginationRows, getRecent }) => {
 
     setDeleted(false)
 
-    alert("Are you sure you want to delete this entry?")
+    window.confirm("Are you sure you want to delete this entry?")
     // const response = await axios.delete(`http://localhost:3001/api/makers/${id}/projects/${arg}`)
     const response = await axios.delete(`${BASE_URL}/triggers/actions/${arg}`)
     setDeleted(true)

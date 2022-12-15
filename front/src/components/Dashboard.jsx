@@ -9,6 +9,7 @@ import Chart from '../charts/Chart'
 import LineChart from '../charts/LineChart'
 import CatDash from '../dashboard/CatDash'
 import TriggerDash from '../dashboard/TriggerDash'
+import InsightsDash from '../dashboard/InsightsDash'
 
 const Dashboard = ({ user }) => {
 
@@ -31,7 +32,7 @@ const Dashboard = ({ user }) => {
       <div className="dash-title">INSIGHTS</div>
       <div className="dash-section">
         <div>
-          Some Stuff like AVGs
+          <InsightsDash user={user} />
         </div>
       </div>
 

@@ -16,6 +16,7 @@ import Dashboard from './components/Dashboard'
 import UserContext from './UserContext'
 import Header from './components/Header'
 import TriggerDetails from './pages/TriggerDetails'
+import Profile from './pages/Profile'
 
 
 
@@ -59,7 +60,7 @@ import TriggerDetails from './pages/TriggerDetails'
 <Route path="/about" element={<About/>}/>
 <Route path="/cats" element={<Cats user={user}/>}/>
 <Route path="/cats/add" element={<AddCat user={user}/>}/>
-<Route path="/devices" element={<Devices/>}/>
+<Route path="/profile" element={<Profile/>}/>
 <Route path="/triggers/details/:trigger_id" element={<TriggerDetails/>}/>
 <Route path="/triggers/:cat_id" element={<Triggers/>}/>
         </Routes>

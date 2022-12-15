@@ -53,45 +53,45 @@ const Dashboard = ({ user }) => {
 
   return (
 
-    <div className="dash-container">
-      <div className="dash-title">PETS</div>
-      <div className="dash-section">
-        <div>CATS PLACEHOLDER </div>
-        <div>{catList?.map((cat) => (<div key={cat.id} className="dash-cats">
-          <div>{cat.name}</div>
-          <div>{cat.weight}</div>
-        </div>))}</div>
-      </div>
-      <div className="dash-title">RECENT ACTIVITY</div>
-      <div className="dash-section">
+  //   <div className="dash-container">
+  //     <div className="dash-title">PETS</div>
+  //     <div className="dash-section">
+  //       <div>CATS PLACEHOLDER </div>
+  //       <div>{catList?.map((cat) => (<div key={cat.id} className="dash-cats">
+  //         <div>{cat.name}</div>
+  //         <div>{cat.weight}</div>
+  //       </div>))}</div>
+  //     </div>
+  //     <div className="dash-title">RECENT ACTIVITY</div>
+  //     <div className="dash-section">
 
-        <div>{triggerList?.map((trigger) => (
-          <div key={trigger.id} className="dash-trigger">
+  //       <div>{triggerList?.map((trigger) => (
+  //         <div key={trigger.id} className="dash-trigger">
 
-            <div className="tg-test">{trigger.date}</div>
-            <div className="tg-test">{trigger.time}</div>
-            <div className="tg-test">{trigger.action}</div>
+  //           <div className="tg-test">{trigger.date}</div>
+  //           <div className="tg-test">{trigger.time}</div>
+  //           <div className="tg-test">{trigger.action}</div>
 
-          </div>))}
-        </div>
-
-
-      </div>
+  //         </div>))}
+  //       </div>
 
 
-      {/* <div >
-        <LineChart catId={catId} />
-      </div> */}
-      <div className="dash-title">INSIGHTS</div>
-      <div className="dash-section">
-        <div>STATS PLACEHOLDER</div>
-        <div>Average Visits per day</div>
-        <div className="stats">4.5</div>
-      </div>
-    </div>
+  //     </div>
 
 
-  )
+  //     {/* <div >
+  //       <LineChart catId={catId} />
+  //     </div> */}
+  //     <div className="dash-title">INSIGHTS</div>
+  //     <div className="dash-section">
+  //       <div>STATS PLACEHOLDER</div>
+  //       <div>Average Visits per day</div>
+  //       <div className="stats">4.5</div>
+  //     </div>
+  //   </div>
+
+
+  // )
 
 }
 export default Dashboard

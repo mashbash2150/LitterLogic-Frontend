@@ -57,14 +57,18 @@ const Cats = ({ user }) => {
   }, [catId])
   return (
     <div className="pets-container">
+      <div className="add">
+        <div>Adding a New Pet? </div>
+        <Link to={'/cats/add'}>
+          <button className="button">ADD PET</button>
+        </Link>
 
-      <div>Adding a New Pet? </div>
-      <Link to={'/cats/add'}>
-        <button className="button">ADD PET</button>
-      </Link>
+
+      </div>
+      <div className='dash-title'>MY CAT</div>
       <CatDash catList={catList} />
       <div >
-        <div className='dash-title'>MY CAT</div>
+
         {/* 
         <div>{catList?.map((cat) => (
           <div key={cat.id} className="cat-stats" onClick={() => getCatId(cat.id)}>
