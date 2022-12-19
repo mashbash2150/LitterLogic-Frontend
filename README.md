@@ -52,13 +52,14 @@ TBD
 ### **_Future Updates_**
 
 ####
-
-- [x] Multi-Cat recognition with RFID collar tags
-- [ ] Advanced Charting 
+- [ ] Improve state management with useContext, redux
+- [ ] Incorporate charting libraries successfully
+- [ ] Fix Edit form not populating
+- [ ] Fix Table Time display issues
+- [ ] Multi-Cat recognition with RFID collar tags 
 - [ ] Predictive Analytics
 - [ ] Hardware Updates
-- [ ] Bug Fix
-- [ ] Bug Fix
+
 - [ ] Etc.
 
 ---
