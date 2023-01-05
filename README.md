@@ -1,71 +1,70 @@
-LitterLogic-Frontend
-## *SEI 9-19 Project 4 PERN-Stack App*
+# Getting Started with Create React App
 
-### Date: Dec 15, 2022
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Madeline Ashley
+## Available Scripts
 
+In the project directory, you can run:
 
-### [GitHub - Frontend](https://github.com/mashbash2150/LitterLogic-Frontend) | [GitHub - Backend](https://github.com/mashbash2150/LitterLogic-Backend) | [Trello Board](https://trello.com/b/AT77aoo4/litterlogic)  | [Heroku App](TBD)
+### `npm start`
 
----
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### **_Description_**
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-LitterLogic is an app and IOT solution that aims to both bring humor into your life, and help you monitor your cat's health.  Armed with simple PIR sensors, a cat's visit to the LitterBox will trigger two things: the power on an obnoxious LED sign (available for customization - think: "Occupied", "Pooping", "On Air") and an entry on your cat's LitterLogic Database detailing the time and duration of their visit. Post MVP update will trigger an exhaust fan after the cat exits the litterbox.    
+### `npm test`
 
-For older cats with kidney and digestive health issues, proactivity is of the essence, and LitterLogic arms you with data you need to discuss with your Vet how best to care for your furry loved ones while providing you, the owner, with some much needed comic relief. 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
-#### 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
----
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### **_Technologies_**
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### 
+### `npm run eject`
 
-LitterLogic will feature PERN stack technologies.  
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-This front end will be built with React, using underlying HTML, CSS, and Javascript to ensure an engaging, visually appealing, and responsive UI. 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
----
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### **_Screenshots_**
+### Code Splitting
 
-#### 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-####
+### Analyzing the Bundle Size
 
-TBD
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-#### 
+### Making a Progressive Web App
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
+### Advanced Configuration
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### **_Future Updates_**
+### Deployment
 
-####
-- [ ] Improve state management with useContext, redux
-- [ ] Incorporate charting libraries successfully
-- [ ] Fix Edit form not populating
-- [ ] Fix Table Time display issues
-- [ ] Multi-Cat recognition with RFID collar tags 
-- [ ] Predictive Analytics
-- [ ] Hardware Updates
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- [ ] Etc.
+### `npm run build` fails to minify
 
----
-
-### **_Credits_**
-
-#### 
-
-#### Markdown Cheatsheet: [MarkdownGuide.org](https://www.markdownguide.org/cheat-sheet/)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
