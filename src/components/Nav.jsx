@@ -11,7 +11,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
     authOptions = (
       <div>
         <NavLink to='/dashboard'>DASHBOARD</NavLink>
-        <NavLink to='/cats'>PET DATA</NavLink>
+        <NavLink to='/cats'>LITTERBOX DATA</NavLink>
 
         <NavLink to='/profile'>PROFILE</NavLink>
         <NavLink to='/about'>ABOUT</NavLink>

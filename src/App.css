@@ -18,11 +18,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  width: 250px;
-  height: 200px;
-
+  align-items: center;
+  width: 35vw;
+  height: 28vw;
+  text-align: center;
+  border: 2px solid black;
+  background-color: rgb(231, 231, 143);
   border-radius: 15px;
+  font-size: 2vh;
+  margin: 5px;
+  text-shadow: 0px 0 10px #777774d2;
 }
 
 .insight {
@@ -34,6 +39,7 @@ body {
   height: 100px;
   text-align: center;
   border: 2px solid black;
+  background-color: rgb(231, 231, 143);
   border-radius: 15px;
   font-size: 2vh;
   margin: 5px;
@@ -91,18 +97,40 @@ body {
 
 .cat-container {
   display: flex;
-  justify-content: space-evenly;
-  align-items: space-between;
+  justify-content: space-around;
+  align-items: center;
   /* border-radius: 15px; */
-  width: 850px;
+  width: 85vw;
   font-size: 2vh;
-  margin: 5vh 0 5vh 0;
-  text-align: left;
-  background-color: rgba(219, 225, 200, 0.877);
-  padding: 4vh;
+  margin: 2vw;
 
+  padding: 3vw;
+  text-align: center;
+  border: 2px solid black;
+  background-color: beige;
+  border-radius: 15px;
+  font-size: 2vh;
 
+  text-shadow: 0px 0 10px #777774d2;
+}
 
+.cat-stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border-radius: 15px; */
+  width: 85vw;
+  font-size: 2vh;
+  margin: 2vw;
+
+  padding: 3vw;
+  text-align: center;
+  border: 2px solid black;
+  background-color: beige;
+  border-radius: 15px;
+  font-size: 2vh;
+  margin-bottom: 2vw;
+  text-shadow: 0px 0 10px #777774d2;
 }
 
 .home {
@@ -238,12 +266,22 @@ body {
 }
 
 .table-container {
-  width: 950px;
-  height: 300px;
+  width: 85vw;
+  height: 60vh;
   text-align: center;
   opacity: 1;
-  margin-top: 4vh;
+
   border-radius: 20px;
+
+  /* border-radius: 15px; */
+  width: 85vw;
+  font-size: 2vh;
+  margin-top: 7vw;
+
+  padding: 3vw;
+  text-align: center;
+  border: 2px solid black;
+  background-color: beige;
 
 
 }
@@ -251,6 +289,7 @@ body {
 .table {
   border-radius: 10px;
   text-align: center;
+  width: 75vw;
 
 
 
@@ -266,15 +305,15 @@ body {
 
 }
 
-.data-table {
-  width: 600px;
-  border-radius: 20px;
 
 
+span {
+  font-weight: 900;
+  font-size: 2.5vw;
 }
 
 .cat-name {
-  font-size: 4vh;
+  font-size: 6vw;
   text-align: center;
 }
 
@@ -349,12 +388,12 @@ body {
 
 }
 
-.dash-container .dash-title {
-  align-self: flex-start;
-  margin-left: 15px;
-}
+
 
 .dash-title {
+  align-self: flex-start;
+  margin: 3vw 0 3vw 1vw;
+
   font-size: 3.5vh;
   text-shadow: 0px 0 10px #777774d2;
 
@@ -546,12 +585,12 @@ form {
 }
 
 .dash-img {
-  width: 250px;
-  height: 200px;
+  width: 35vw;
+  height: 28vw;
   object-fit: cover;
-
+  border: 2px solid black;
   border-radius: 15px;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .form {

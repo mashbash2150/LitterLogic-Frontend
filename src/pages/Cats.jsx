@@ -65,8 +65,8 @@ const Cats = ({ user }) => {
 
 
       </div> */}
-      <div className='dash-title'>MY CAT</div>
-      <CatDash catList={catList} />
+      {/* <div className='dash-title'></div>
+      <CatDash catList={catList} /> */}
       <div >
 
         {/* 
@@ -87,7 +87,7 @@ const Cats = ({ user }) => {
         </div>
 
 
-        <div className='dash-title'>LITTERBOX EVENTS</div>
+        <div className='dash-title'>LITTERBOX DATA</div>
         <div className="table-container">
           <Table paginationRows={10} getRecent={false} />
           {/* <div>{triggerList?.map((trigger) => (

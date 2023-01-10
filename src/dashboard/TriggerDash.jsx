@@ -39,9 +39,13 @@ const TriggerDash = () => {
 
 
   return (
+
+
     <div className="table-container">
-      <Table className="table" paginationRows={5} getRecent={true} theme="dark" />
+      <div className="dash-title">RECENT ACTIVITY</div>
+      <Table className="table" paginationRows={6} getRecent={true} theme="dark" />
     </div>
+
   )
 }
 

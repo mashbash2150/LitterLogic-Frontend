@@ -16,19 +16,19 @@ const Dashboard = ({ user }) => {
 
   return (
     <div className="dash-container">
-      <div className="dash-title">MY CAT</div>
+      <div className="dash-title"></div>
       <div className="dash-section">
         <div>
           <CatDash user={user} />
         </div>
       </div>
-      <div className="dash-title">INSIGHTS</div>
+      <div className="dash-title"></div>
       <div className="dash-section">
         <div>
           <InsightsDash user={user} />
         </div>
       </div>
-      <div className="dash-title">RECENT ACTIVITY</div>
+
       <div className="table-section">
         <div>
           <TriggerDash user={user} />

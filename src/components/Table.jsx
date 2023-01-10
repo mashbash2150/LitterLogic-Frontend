@@ -9,7 +9,7 @@ import DataTable, { createTheme } from "react-data-table-component"
 
 
 const Table = ({ paginationRows, getRecent }) => {
-  const Button = () => <button className="del-button" type="button" onClick={(arg) => deleteTrigger(arg.id)}>Delete Trigger</button>;
+  // const Button = () => <button className="del-button" type="button" onClick={(arg) => deleteTrigger(arg.id)}>Delete Trigger</button>;
   let { cat_id } = useParams()
   let navigate = useNavigate()
   const [triggerList, setTriggerList] = useState([])
@@ -23,20 +23,20 @@ const Table = ({ paginationRows, getRecent }) => {
     {
       name: "Action",
       selector: (row) => row.action.toUpperCase(),
-      fontSize: '2vh',
+      fontSize: '2vw',
       conditionalCellStyles: [
         {
           when: row => row.action == "enter",
           style: {
             fontSize: "2vw",
-            backgroundColor: "rgb(159, 199, 129)"
+            backgroundColor: "rgb(159, 199, 129,0.7)"
           }
         },
         {
           when: row => row.action == "exit",
           style: {
             fontSize: "2vw",
-            backgroundColor: "rgba(172, 10, 56, 0.75)"
+            backgroundColor: "rgba(172, 10, 56, 0.9)"
           }
         }
       ]
@@ -88,7 +88,7 @@ const Table = ({ paginationRows, getRecent }) => {
         backgroundColor: 'rgba(219, 225, 200, 0.877)',
         fontSize: '2vw',
       },
-      cell: (row) => <Button arg={row.id} >Delete Entry</Button>,
+      // cell: (row) => <Button arg={row.id} >Delete Entry</Button>,
     },
 
 
