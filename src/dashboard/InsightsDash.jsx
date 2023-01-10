@@ -34,19 +34,22 @@ const InsightsDash = () => {
 
 
   return (
-    <div className="cat-container">
+    <div className="cat-stats-container">
+      <div className="dash-title">INSIGHTS</div>
+      <div className="flex-container">
 
-      <div className="col-box">
-        <div className="insight">Daily visits this week <br></br>(avg)</div>
-        <div className="avg">5.9</div>
-      </div>
-      <div className="col-box">
-        <div className="insight">Daily visits this month <br></br>(avg)</div>
-        <div className="avg">7.3</div>
-      </div>
-      <div className="col-box">
-        <div className="insight">Trends</div>
-        <div className="adv">LOWER THAN AVERAGE <br></br>Is your cat getting enough water?</div>
+        <div className="col-box">
+          <div className="insight">Daily visits this week <br></br>(avg)</div>
+          <div className="avg">5.9</div>
+        </div>
+        <div className="col-box">
+          <div className="insight">Daily visits this month <br></br>(avg)</div>
+          <div className="avg">7.3</div>
+        </div>
+        <div className="col-box">
+          <div className="insight">Trends</div>
+          <div className="adv">LOWER THAN AVERAGE <br></br>Is your cat getting enough water?</div>
+        </div>
       </div>
     </div >
   )

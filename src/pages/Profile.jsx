@@ -13,7 +13,7 @@ const Profile = ({ user }) => {
 
 
   const getUserCats = async () => {
-    //console.log(user)
+    console.log(user)
     const res = await axios.get(`${BASE_URL}/cats/${user.id}`)
     console.log('userlistingcats', res.data)
     setCatList(res.data)
@@ -38,7 +38,7 @@ const Profile = ({ user }) => {
 
   return (
     <div className="profile-container">
-      <div className='dash-title'>Profile</div>
+      <div className='dash-title'>Hello, {user.email}!</div>
 
       <div className="profile device-section">My Cats
         <buttons>
@@ -52,7 +52,6 @@ const Profile = ({ user }) => {
           <button onClick={() => deleteCat()}>Remove Cat</button>
         </buttons>
       </div>
-      <div className="profile">My Devices</div>
       <Devices />
     </div>
   )

@@ -56,41 +56,15 @@ const Cats = ({ user }) => {
 
   }, [catId])
   return (
-    <div className="pets-container">
-      {/* <div className="add">
-        <div>Adding a New Pet? </div>
-        <Link to={'/cats/add'}>
-          <button className="button">ADD PET</button>
-        </Link>
 
 
-      </div> */}
-      {/* <div className='dash-title'></div>
-      <CatDash catList={catList} /> */}
-      <div >
-
-        {/* 
-        <div>{catList?.map((cat) => (
-          <div key={cat.id} className="cat-stats" onClick={() => getCatId(cat.id)}>
-            <div className="cat-name">{cat.name}</div>
-            <div>BIRTHDAY {cat.birthday}</div>
-            <div>WEIGHT {cat.weight}</div>
-
-            <div>NOTES {cat.notes}</div>
-            <div></div>
-          </div>
-
-        ))} */}
-        <div className="events-container">
 
 
-        </div>
-
-
+    <div>
+      <div className="table-big-container">
         <div className='dash-title'>LITTERBOX DATA</div>
-        <div className="table-container">
-          <Table paginationRows={10} getRecent={false} />
-          {/* <div>{triggerList?.map((trigger) => (
+        <Table paginationRows={10} getRecent={false} />
+        {/* <div>{triggerList?.map((trigger) => (
               <div key={trigger.id} className="trigger-entry">
                 <div>ACTION: {trigger.action}</div>
                 <div>TRIGGERED: {trigger.date}</div>
@@ -101,11 +75,13 @@ const Cats = ({ user }) => {
               
 
             </div> */}
-          <button className="button-lg" onClick={triggerEdit}>EDIT TRIGGERS</button>
-        </div>
+
+      </div>
+      <div className='profile'>
+        <button className="button-lg" onClick={triggerEdit}>EDIT TRIGGERS</button>
       </div>
     </div>
-    // </div>
+
   )
 }
 

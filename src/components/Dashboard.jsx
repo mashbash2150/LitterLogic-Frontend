@@ -22,7 +22,7 @@ const Dashboard = ({ user }) => {
           <CatDash user={user} />
         </div>
       </div>
-      <div className="dash-title"></div>
+
       <div className="dash-section">
         <div>
           <InsightsDash user={user} />

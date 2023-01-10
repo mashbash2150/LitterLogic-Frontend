@@ -60,7 +60,7 @@ import Profile from './pages/Profile'
 <Route path="/about" element={<About/>}/>
 <Route path="/cats" element={<Cats user={user}/>}/>
 <Route path="/cats/add" element={<AddCat user={user}/>}/>
-<Route path="/profile" element={<Profile/>}/>
+<Route path="/profile" element={<Profile user={user}/>}/>
 <Route path="/triggers/details/:trigger_id" element={<TriggerDetails/>}/>
 <Route path="/triggers/:cat_id" element={<Triggers/>}/>
         </Routes>

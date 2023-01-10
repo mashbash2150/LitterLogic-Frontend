@@ -5,17 +5,19 @@ import React from 'react'
 const Devices = () => {
   return (
     <div className="device-container">
-      <div className="device-section">
 
-        Register Device
+      <div className="profile device-section">My Devices
+        <buttons>
 
+          <div></div>
+
+
+          <button>Register Device</button>
+          <button>Calibrate</button>
+          <button>Remove Device</button>
+        </buttons>
       </div>
-      <div className="device-section">
-        Calibrate
-      </div>
-      <div className="device-section">
-        Remove Device
-      </div>
+
     </div>
   )
 }
