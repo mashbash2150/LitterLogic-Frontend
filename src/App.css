@@ -168,10 +168,7 @@ body {
 
 
 
-.p-img {
-  margin-right: 20px;
 
-}
 
 .p-flex-long {
   display: flex;
@@ -187,36 +184,30 @@ body {
 .p-flex-long p {
   display: flex;
   flex-direction: column;
-  width: 750px;
+  width: auto;
   justify-content: center;
   align-items: center;
   height: 100px;
   background-color: rgba(219, 225, 200, 0.877);
   border-radius: 15px;
-  padding: 20px;
-
-
+  padding: 40px;
 }
 
 .p-flex-short {
   display: flex;
   justify-content: center;
   align-items: center;
-
-
+  margin: -25px auto;
 }
 
 .p-flex-med {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2vh;
-
-
 }
 
 .slide-container {
-  width: 350px;
+  width: 25vw;
 }
 
 
@@ -224,16 +215,15 @@ body {
 .p-flex-short p {
   display: flex;
   flex-direction: column;
-  width: 390px;
+  width: auto;
   justify-content: center;
   align-items: center;
   height: 250px;
   background-color: rgba(219, 225, 200, 0.877);
   border-radius: 15px;
-  padding: 10px;
-  margin: 0 20px 0 20px;
+  padding: 40px;
+  margin-right: 20px;
   text-shadow: 0px 0 10px #777774d2;
-
   ;
 
 
@@ -242,14 +232,14 @@ body {
 .p-flex-med p {
   display: flex;
   flex-direction: column;
-  width: 330px;
+  width: 60%;
   justify-content: center;
   align-items: center;
-  height: 390px;
+  height: 32vw;
   background-color: rgba(219, 225, 200, 0.877);
   border-radius: 15px;
-  padding: 0 10px;
-  margin: 0 20px 0 20px;
+  padding: 0 40px;
+  margin-left: 20px;
   text-shadow: 0px 0 10px #777774d2;
 
   ;
@@ -415,11 +405,15 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   text-align: center;
 
-
+  width: 65vw;
+  margin: 0 auto;
 }
+
+
 
 
 
@@ -730,19 +724,19 @@ button {
 }
 
 .p-flex-med img {
-  width: 390px;
+  width: 40%;
   object-fit: contain;
 
   border-radius: 10px;
   opacity: 0.75;
-  margin-left: 10px;
+
 
 }
 
 
 .image-container img {
-  width: 350px;
-  height: 268px;
+  width: 25vw;
+  height: 325px;
   object-fit: cover;
   border-radius: 20px;
 
@@ -856,6 +850,27 @@ button {
     text-align: center;
     margin-bottom: -15vh;
     font-size: 2vh;
+  }
+
+  .table-container {
+    width: 95vh;
+    height: 60vh;
+    text-align: center;
+    opacity: 1;
+
+    border-radius: 20px;
+
+    /* border-radius: 15px; */
+
+    font-size: 2vh;
+    margin: 2vw;
+
+    padding: 3vw;
+    text-align: center;
+    border: 1px solid black;
+    background-color: beige;
+
+
   }
 }
 

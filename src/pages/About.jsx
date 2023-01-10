@@ -20,7 +20,9 @@ const About = () => {
           I put together a simple device consisiting of an ESP32 dev board, a PIR motion sensor, and LEDs (plus a few jumper wires and resistors).  Using the Arduino IDE, I wrote and uploaded a simple application to the device which allows it to send JSON objects to my Postgres backend.
           The device detects minor shifts in environmental temperature, and interprets them as a motion event, changing the state of the sensor from low to high voltage (or vice versa).  When this occurs,a POST request is made to my API, and further parsing of the payload happens downstream.
           When placed in Feta's litterbox, the device will fire 'Enter' and 'Exit' events accordingly.  For addedd fun, the sensor behaves much like an airplane lavatory sign, illuminating a green cat when vacant, and a red cat when occupied.
+          <div className="about-large">
 
+          </div>
           <div className="about-med">Backend & API</div>
 
           Hosted on Heroku for the time being, my Postgres backend stores parsed data from the sensor's API calls into a 'triggers' table, that supplies the information for my frontend tables. One area still
