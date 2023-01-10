@@ -82,13 +82,13 @@ const Triggers = () => {
 
 
 
-      <div className='section-header'></div>
+
       <div className="trigger-container">
+        <div className='dash-title'>EDIT TRIGGERS</div>
         <div>{triggerList?.map((trigger) => (
 
           <div key={trigger.id} className="trigger-entry">
             <div>{trigger.action.toUpperCase()}</div>
-            <div>DATE: {trigger.date}</div>
             <div>DATE: {trigger.date}</div>
             {/* //<div>DATE: {trigger.date.substring(0, trigger.date.lastIndexOf('T'))}</div> */}
             <div>TIME: {trigger.time}</div>

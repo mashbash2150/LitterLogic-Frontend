@@ -19,6 +19,14 @@ const Table = ({ paginationRows, getRecent }) => {
   const normDate = new Date()
   // const sortIcon = <ArrowDownward />;
 
+
+  const customStyles = {
+    headCells: {
+      style: {
+        fontSize: '2vh'
+      }
+    }
+  }
   const columns = [
     {
       name: "Action",
@@ -180,6 +188,7 @@ const Table = ({ paginationRows, getRecent }) => {
         defaultSortAsc={false}
         defaultSortFieldId="2"
         noHeader
+        customStyles={customStyles}
 
         paginationPerPage={paginationRows}
       //conditionalRowStyles={conditionalRowStyles}
