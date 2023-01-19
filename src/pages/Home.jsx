@@ -65,7 +65,6 @@ const Home = ({ user }) => {
 
         <div className="largest" >Cats. Love. Boxes. </div>
         <div className="short">Who says their owners can't too?</div>
-        {/* <div className="short">* Enter LitterLogic * </div> */}
         <div className="home-container">
           <div className='p-flex-long'>
             <p>  <span className="emph" >Simple + Smart Solutions</span>Litterlogic tracks your cat's litterbox habits by engaging low voltage, wifi-connected sensors that feed movement data into to the User platform, providing addional insights on your cat's health and wellbeing.</p>

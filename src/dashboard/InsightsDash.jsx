@@ -1,6 +1,4 @@
 import React from 'react'
-import CatCard from '../components/CatCard'
-import { Link, useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState, useCallback } from 'react'
@@ -9,27 +7,20 @@ import { useEffect, useState, useCallback } from 'react'
 
 const InsightsDash = () => {
 
+  //WORK NEEDED
 
-  const [catList, setCatList] = useState([])
-  const [catId, setCatId] = useState('')
-  const [triggerList, setTriggerList] = useState([])
+  // const [catList, setCatList] = useState([])
+  // const [catId, setCatId] = useState('')
+  // const [triggerList, setTriggerList] = useState([])
 
+  // const getInsights = async () => {
+  //   const res = await axios.get(`${BASE_URL}/triggers/3`)
+  //   console.log('triggers', res.data)
 
-
-  const getInsights = async () => {
-    const res = await axios.get(`${BASE_URL}/triggers/3`)
-    console.log('triggers', res.data)
-
-  }
-
-
-
-  useEffect(() => {
+  // }
 
 
 
-
-  }, [])
 
 
 

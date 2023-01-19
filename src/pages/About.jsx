@@ -17,9 +17,9 @@ const About = () => {
           All aspects of this app, including the hardware sensor that supplies its data, were built from the ground up.  A few notes on it's components:
 
           <div className="about-med">Hardware</div>
-          I put together a simple device consisiting of an ESP32 dev board, a PIR motion sensor, and LEDs (plus a few jumper wires and resistors).  Using the Arduino IDE, I wrote and uploaded a simple application to the device which allows it to send JSON objects to my Postgres backend.
+          I put together a simple device consisiting of an ESP32 dev board, a PIR motion sensor, and LEDs (plus a few jumper wires and resistors).  Using the Arduino IDE, I wrote and uploaded a simple application to the device which allows it to send JSON objects through my API to my Postgres backend.
           The device detects minor shifts in environmental temperature, and interprets them as a motion event, changing the state of the sensor from low to high voltage (or vice versa).  When this occurs,a POST request is made to my API, and further parsing of the payload happens downstream.
-          When placed in Feta's litterbox, the device will fire 'Enter' and 'Exit' events accordingly.  For addedd fun, the sensor behaves much like an airplane lavatory sign, illuminating a green cat when vacant, and a red cat when occupied.
+          When placed in Feta's litterbox, the device will fire 'Enter' and 'Exit' events accordingly.  For added fun, the sensor is rigged up to a lavatory-style sign, illuminating a green cat when vacant, and a red cat when occupied.
           <div className="about-img">
             <img src="https://github.com/mashbash2150/LitterLogic-Frontend/blob/main/images/LLSensor_reduced.jpg?raw=true" alt="sensor" />
             <img src="https://github.com/mashbash2150/LitterLogic-Frontend/blob/main/images/vacant2.gif?raw=true
@@ -27,7 +27,7 @@ const About = () => {
           </div>
           <div className="about-med">Backend & API</div>
 
-          Hosted on Heroku for the time being, my Postgres backend stores parsed data from the sensor's API calls into a 'triggers' table, that supplies the information for my frontend tables. One area still
+          Hosted on Heroku for the time being, my Postgres backend stores parsed data from the sensor's API calls into a 'triggers' table, that supplies the information rendered on the frontend. One area still
           requiring improvments is the normalization of timestamps to facilitate simpler data visualization.
           <div className="about-med">Frontend</div>
           The React Data Table Component library was used to render trigger data in a table format.  While I wasn't able to implement chart libraries for the MVP version of this app, it is my goal in the near future to include charting in the insights portion of the dashboard.

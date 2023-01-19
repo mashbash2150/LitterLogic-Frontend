@@ -14,9 +14,13 @@ const Profile = ({ user }) => {
 
   const getUserCats = async () => {
     console.log(user)
-    const res = await axios.get(`${BASE_URL}/cats/${user.id}`)
+    const res = await axios.get(`${BASE_URL}/cats/1`)
+    //DISABLED FOR DEMO: 
+    // const res = await axios.get(`${BASE_URL}/cats/${user.id}`)
     console.log('userlistingcats', res.data)
     setCatList(res.data)
+
+
 
     //console.log("catId", catList[0].id)
     // getCatTriggers(catList[0].id)
@@ -25,8 +29,11 @@ const Profile = ({ user }) => {
   const deleteCat = async (arg) => {
     setDeleted(false)
     window.confirm("Are you sure you want to delete this cat?")
+
+    const response = await axios.delete(`${BASE_URL}/cats/0`)
+    //DISABLED FOR DEMO:
     // const response = await axios.delete(`http://localhost:3001/api/makers/${id}/projects/${arg}`)
-    const response = await axios.delete(`${BASE_URL}/cats/2`)
+
     setDeleted(true)
   }
 
@@ -38,7 +45,10 @@ const Profile = ({ user }) => {
 
   return (
     <div className="profile-container">
-      <div className='dash-title'>Hello, {user.email}!</div>
+      <div className='dash-title'>Hello, Feta's Owner!</div>
+
+      {/* //DISABLED FOR DEMO: */}
+      {/* <div className='dash-title'>Hello, {user.email}!</div> */}
 
       <div className="profile device-section">My Cats
         <buttons>

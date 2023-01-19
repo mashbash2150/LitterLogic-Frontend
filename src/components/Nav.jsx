@@ -1,10 +1,14 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useRouteLoaderData } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Header from './Header';
 
 const Nav = ({ authenticated, user, handleLogOut }) => {
 
+  const activateDemo = (arg) => {
+    user = { id: 1, email: 'test@test.com' }
+    authenticated = true
 
+  }
   let authOptions;
 
   if (user) {
@@ -26,7 +30,9 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
       <NavLink to='/about'>ABOUT</NavLink>
       <NavLink to='/login'>LOGIN</NavLink>
       <NavLink to='/register'>REGISTER</NavLink>
-      <NavLink to='/dashboard'>DEMO DASHBOARD</NavLink>
+      <NavLink class="demo" to='/dashboard'>DEMO DASHBOARD</NavLink>
+      <NavLink class="demo" to='/cats'>DEMO LITTERBOX DATA</NavLink>
+      <NavLink class="demo" to='/profile'>DEMO PROFILE</NavLink>
 
       <img className="header-img" src="https://i.imgur.com/aSdUiH9.png" alt="" />
 
@@ -39,9 +45,17 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
 
       <div className="nav-container">
         <div className="nav-options">
+          <div>
+            <NavLink to='/dashboard'>DASHBOARD</NavLink>
+            <NavLink to='/cats'>LITTERBOX DATA</NavLink>
 
-          {authenticated && user ? authOptions : unAuthOptions}
-
+            <NavLink to='/profile'>PROFILE</NavLink>
+            <NavLink to='/about'>ABOUT</NavLink>
+            <NavLink onClick={handleLogOut} to='/'>LOG OUT</NavLink>
+            <img className="header-img" src="https://i.imgur.com/aSdUiH9.png" alt="" />
+          </div>
+          {/* DISABLED FOR DEMO: */}
+          {/* {authenticated && user ? authOptions : unAuthOptions} */}
         </div>
       </div>
 

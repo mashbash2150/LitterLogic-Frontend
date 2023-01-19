@@ -24,22 +24,14 @@ const AddCat = ({ user }) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
 
-  const addToArray = (e) => {
 
-    setArrayValue(e.target.id = e.target.value)
-
-  }
-
-  const pushToArray = (arr) => {
-    console.log(arr)
-    arr.push(arrayValue)
-    console.log(arrayValue)
-
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post(`${BASE_URL}/cats/create/${user.id}`, formState)
+    await axios.post(`${BASE_URL}/cats/create/1`, formState)
+    // DISABLED FOR DEMO:
+    // await axios.post(`${BASE_URL}/cats/create/${user.id}`, formState)
+
     setFormState(initialFormState)
     navigate(`/cats`)
   }

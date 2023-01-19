@@ -1,40 +1,25 @@
 import React from 'react'
-import CatCard from '../components/CatCard'
-import { Link, useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
-import { useEffect, useState, useCallback } from 'react'
-import { useContext } from 'react'
+import { useEffect, useState, useCallback, useContext } from 'react'
 
 import Table from '../components/Table'
 
 const TriggerDash = () => {
 
-
-  const [catList, setCatList] = useState([])
-  const [catId, setCatId] = useState('')
-  const [triggerList, setTriggerList] = useState([])
+  //WORK NEEDED
+  // const [catId, setCatId] = useState('')
 
 
-
-  const getCatTriggers = async () => {
-    if (catId) {
-      const res = await axios.get(`${BASE_URL}/triggers/3`)
-      console.log('triggers', res.data)
-      setTriggerList(res.data.slice(0, 6))
-    } else {
-      console.log("no cat ID")
-    }
-  }
-
-
-
-  useEffect(() => {
-
-
-
-
-  }, [])
+  // const getCatTriggers = async () => {
+  //   if (catId) {
+  //     const res = await axios.get(`${BASE_URL}/triggers/3`)
+  //     console.log('triggers', res.data)
+  //     setTriggerList(res.data.slice(0, 6))
+  //   } else {
+  //     console.log("no cat ID")
+  //   }
+  // }
 
 
 

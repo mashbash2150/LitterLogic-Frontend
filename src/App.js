@@ -20,9 +20,15 @@ import Profile from './pages/Profile'
 
 
 
+
  const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
+  const [showModal,setShowModal]=useState(false)
+
+  const modal=()=>{
+    setShowModal(true)
+  }
 
 
   const handleLogOut = () => {
@@ -46,6 +52,7 @@ import Profile from './pages/Profile'
   }, [])
   return (
     <div>
+      
       <div>
       <Header />
           <Nav authenticated={authenticated} user={user} handleLogOut={handleLogOut}/>
