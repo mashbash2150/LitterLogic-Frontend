@@ -5,19 +5,14 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from "react-router-dom"
 import DataTable, { createTheme } from "react-data-table-component"
 
-// import ArrowDownward from '../@material-ui/icons/ArrowDownward';
-
 
 const Table = ({ paginationRows, getRecent }) => {
-  // const Button = () => <button className="del-button" type="button" onClick={(arg) => deleteTrigger(arg.id)}>Delete Trigger</button>;
-  let { cat_id } = useParams()
-  let navigate = useNavigate()
+
   const [triggerList, setTriggerList] = useState([])
   const [perPage, setPerPage] = useState(5)
   const [deleted, setDeleted] = useState(false)
   const currentDate = new Date()
-  const normDate = new Date()
-  // const sortIcon = <ArrowDownward />;
+
 
 
   const customStyles = {
@@ -60,16 +55,8 @@ const Table = ({ paginationRows, getRecent }) => {
         backgroundColor: 'rgba(219, 225, 200, 0.877)',
         fontSize: '2vw'
       }
-
-      //selector: (row) => row.date.substring(0, row.date.lastIndexOf('T'))
-      //selector: (row) => Date.parse(row.createdAt).substring(0, 3)
-      //row.createdAt.substring(0, row.date.lastIndexOf('T'))
     },
-    // {
-    //   name: "Date",
-    //   selector: (row) => Date(Date.parse(row.createdAt))
-    //   //row.date.substring(0, row.date.lastIndexOf('T'))
-    // },
+
     {
       name: "Time",
       selector: (row) => row.time,
@@ -80,12 +67,6 @@ const Table = ({ paginationRows, getRecent }) => {
         backgroundColor: 'rgba(219, 225, 200, 0.877)',
         fontSize: '2vw',
       }
-      // Date.getUTCHours(row.createdAt) + ":" + Date.getUTCMinutes(row.createdAt) + ":" + Date.getUTCSeconds(row.createdAt)
-      // Date(Date.parse(row.createdAt)).substring(16, 24)
-
-      //normDate.getUTCHours(Date.parse(row.createdAt))
-      // (normDate.getUTCHours(row.createdAt)) + ":" + (normDate.getUTCMinutes(row.createdAt)) + ":" + (normDate.getUTCSeconds(row.createdAt))
-      //Date(Date.parse(row.createdAt)).substring(11, 19)
     },
     {
       name: '',
@@ -98,29 +79,14 @@ const Table = ({ paginationRows, getRecent }) => {
       },
       // cell: (row) => <Button arg={row.id} >Delete Entry</Button>,
     },
-
-
-
-
   ]
-  // const conditionalRowStyles = [
-  //   {
-  //     when: row => row.action == "enter",
-  //     style: {
-  //       backgroundColor: "lightgrey"
-  //     }
-  //   }
-  // ]
-
-
-
 
 
   const getCatTriggers = async () => {
     const theDate = new Date(Date.parse("2022-12-14T14:27:27.642Z"))
     console.log("thedate", theDate)
 
-    //conditionally rendering smaller list if Component is rendered through dashboard (and thus getREcent prop passed in is true)
+    //conditionally rendering smaller list if Component is rendered through dashboard (and thus getRecent prop passed in is true)
     const hrs = parseInt(currentDate.getHours()) - 6
     const day = parseInt(currentDate.getDate())
     console.log("today is", day, "hour (-6) is", hrs)
@@ -128,32 +94,7 @@ const Table = ({ paginationRows, getRecent }) => {
     const res = await axios.get(`${BASE_URL}/triggers/3`)
     console.log(res.data)
     setTriggerList(res.data)
-    // if (getRecent == true) {
-    //   const recent = res.data.filter((trig) => {
-    //     if (parseInt(trig.createdAt) === day) {
-    //       //if (parseInt(trig.createdAt.substring(8, 10)) === day) {
-    //       //console.log(parseInt(trig.time.substring(0, 2)))
 
-    //       return parseInt(trig.createdAt) >= hrs
-    //       //return parseInt(trig.createdAt.substring(11, 13)) >= hrs
-    //     } console.log(parseInt(trig.date))
-    //     //} console.log(parseInt(trig.date.substring(8, 10)))
-    //   })
-    //   // if (getRecent == true) {
-    //   //   const recent = res.data.filter((trig) => {
-    //   //     if (parseInt(trig.createdAt.substring(8, 10)) === day + 1) {
-    //   //       console.log(parseInt(trig.time.substring(0, 2)))
-
-    //   //       return parseInt(trig.time.substring(0, 2)) >= hrs
-    //   //     } console.log(parseInt(trig.date.substring(8, 10)))
-    //   //   })
-
-    //   console.log("recent", recent)
-    //   setTriggerList(recent)
-    // } else { setTriggerList(res.data) }
-
-
-    // setDtArray(parseTimeStamps(triggerList))
   }
 
   const deleteTrigger = async (arg) => {

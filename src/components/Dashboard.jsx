@@ -1,11 +1,4 @@
 import React from 'react'
-import CatCard from './CatCard'
-import { Link, useNavigate } from 'react-router-dom'
-import { BASE_URL } from '../globals'
-import axios from 'axios'
-import { useEffect, useState, useCallback } from 'react'
-import { useContext } from 'react'
-
 import CatDash from '../dashboard/CatDash'
 import TriggerDash from '../dashboard/TriggerDash'
 import InsightsDash from '../dashboard/InsightsDash'
