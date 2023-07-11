@@ -1,5 +1,4 @@
 # LitterLogic-Frontend
-## *SEI 9-19 Project 4 PERN-Stack App*
 
 ### Date: Dec 15, 2022
 
@@ -28,9 +27,8 @@ For older cats with kidney and digestive health issues, proactivity is of the es
 
 #### 
 
-** NOTE: API calls are currently hard coded, not based on state, in order to facilitate a better demo experience. This way, a visitor can view existing cat/user/trigger data from the only sensor built. 
+** NOTE: API calls are currently hard coded, not based on state, in order to facilitate a better demo experience. This way, a visitor can view existing cat/user/trigger data from the prototype sensor.
 
-LitterLogic will feature PERN stack technologies.  The frontend will use the React for its structure.   The React DataTable component library will be utilized for basic data display.  Future exploration of charting libraries is still needed.  
 
 
 ---
@@ -56,20 +54,13 @@ TBD
 ** API calls are hard coded for now, not based on state, in order to facilitate a better demo experience that is linked to existing cat/user/trigger data.
 
 - [ ] Implementation of Charting Libraries
-- [ ] Better State Management with UseContext or Redux
 - [ ] Implement Modals
 - [ ] Better media responsiveness
 - [ ] Fine tune sensitivity of device to prevent false triggers
 - [ ] Predictive Analytics
 - [ ] Multi-Cat recognition with RFID collar tags
-- [ ] Bug Fix
-- [ ] Bug Fix
-- [ ] Etc.
+
 
 ---
 
-### **_Credits_**
 
-#### 
-
-#### Markdown Cheatsheet: [MarkdownGuide.org](https://www.markdownguide.org/cheat-sheet/)
