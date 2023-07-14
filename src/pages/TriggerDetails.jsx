@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
 import { BASE_URL } from '../globals'
 import axios from 'axios'
+import { Button } from '@mui/material'
 
 
 
@@ -49,7 +50,7 @@ const TriggerDetails = () => {
         <input className="input" type="text" id="date" cols="30" onChange={handleChange} value={formState.date} />
         <label className="label" htmlFor="time">Time:</label>
         <input className="input" type="text" id="time" cols="30" onChange={handleChange} value={formState.time} />
-        <button>Submit</button>
+        <Button variant="contained" color="secondary">Submit</Button>
       </form>
 
     </div>

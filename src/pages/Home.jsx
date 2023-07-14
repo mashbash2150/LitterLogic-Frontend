@@ -4,6 +4,7 @@ import { Slide, Fade } from 'react-slideshow-image';
 import { useEffect } from 'react';
 import 'react-slideshow-image/dist/styles.css'
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material'
 
 
 
@@ -96,15 +97,15 @@ const Home = ({ user }) => {
         </div>
         <div className="large">DISCOVER SMART PET MONITORING<br></br>FOR YOURSELF</div>
         <div >REGISTER OR LOGIN TO BEGIN</div>
-        <div className='home-buttons'>
-          <Link to={'/login'}>
-            <button>Login</button>
-          </Link>
-          <Link to={'/register'}>
-            <button>Create Account</button>
-          </Link>
 
-        </div>
+        <Link to={'/login'}>
+          <Button variant="contained" color="secondary">Login</Button>
+        </Link>
+        <Link to={'/register'}>
+          <Button variant="contained" color="secondary">Create Account</Button>
+        </Link>
+
+
       </div>
 
 

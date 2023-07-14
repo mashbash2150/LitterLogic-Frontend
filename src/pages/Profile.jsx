@@ -5,6 +5,9 @@ import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Button } from '@mui/material'
+import AddIcon from '@mui/icons-material/Add'
+import EditIcon from '@mui/icons-material/Edit'
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 const Profile = ({ user }) => {
@@ -56,11 +59,11 @@ const Profile = ({ user }) => {
 
           <div></div>
           <Link to={'/cats/add'}>
-            <Button variant="contained" color="secondary" >Add Cat</Button>
+            <Button startIcon={<AddIcon />} variant="contained" color="secondary" >Add Cat</Button>
           </Link>
 
-          <Button variant="contained" color="secondary" >Edit Cat</Button>
-          <Button variant="contained" color="secondary" onClick={() => deleteCat()}>Remove Cat</Button>
+          <Button startIcon={<EditIcon />} variant="contained" color="secondary" >Edit Cat</Button>
+          <Button startIcon={<DeleteIcon />} variant="contained" color="secondary" onClick={() => deleteCat()}>Remove Cat</Button>
         </buttons>
       </div>
       <Devices />

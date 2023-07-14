@@ -4,7 +4,8 @@ import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Table from '../components/Table'
-import CatDash from '../dashboard/CatDash'
+import { Button } from '@mui/material'
+import EditIcon from '@mui/icons-material/Edit'
 
 
 
@@ -57,7 +58,7 @@ const Cats = ({ user }) => {
 
       </div>
       <div className='profile'>
-        <button className="button-lg" onClick={triggerEdit}>EDIT TRIGGERS</button>
+        <Button startIcon={<EditIcon />} variant="contained" color="secondary" onClick={triggerEdit}>EDIT TRIGGERS</Button>
       </div>
     </div>
 

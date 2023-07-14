@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { RegisterUser } from '../services/Auth'
 import { Link } from 'react-router-dom'
+import { Button } from '@mui/material'
 
 const Register = () => {
   const navigate = useNavigate()
@@ -83,7 +84,7 @@ const Register = () => {
             value={formValues.confirmPassword}
             required
           />
-          <button className="button"
+          <Button variant="contained" color="secondary"
             disabled={
               !formValues.email ||
               (!formValues.password &&
@@ -91,7 +92,7 @@ const Register = () => {
             }
           >
             CREATE ACCOUNT
-          </button>
+          </Button>
 
         </form>
       </div>

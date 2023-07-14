@@ -1,5 +1,8 @@
 import React from 'react'
-
+import { Button } from '@mui/material'
+import AddIcon from '@mui/icons-material/Add'
+import BuildIcon from '@mui/icons-material/Build';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 const Devices = () => {
@@ -12,9 +15,9 @@ const Devices = () => {
           <div></div>
 
 
-          <button>Register Device</button>
-          <button>Calibrate</button>
-          <button>Remove Device</button>
+          <Button startIcon={<AddIcon />} variant="contained" color="secondary">Register Device</Button>
+          <Button startIcon={<BuildIcon />} variant="contained" color="secondary">CaliBrate</Button>
+          <Button startIcon={<DeleteIcon />} variant="contained" color="secondary">Remove Device</Button>
         </buttons>
       </div>
 

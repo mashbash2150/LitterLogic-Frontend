@@ -3,7 +3,7 @@ import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
-
+import { Button } from '@mui/material'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Triggers = () => {
@@ -95,8 +95,8 @@ const Triggers = () => {
             {/* <div>TIME: {Date(Date.parse(trigger.createdAt)).substring(16, 24)}</div> */}
 
 
-            <button className="del-button" onClick={() => triggerEdit(trigger.id)}>Edit</button>
-            <button className="del-button" onClick={() => deleteTrigger(trigger.id)}>Delete</button>
+            <Button variant="contained" color="secondary" onClick={() => triggerEdit(trigger.id)}>Edit</Button>
+            <Button variant="contained" color="secondary" onClick={() => deleteTrigger(trigger.id)}>Delete</Button>
           </div>
         ))}
           <div >

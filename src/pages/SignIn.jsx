@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { LoginUser } from '../services/Auth'
+import { Button } from '@mui/material'
 
 const Login = ({ toggleAuthenticated, setUser, user }) => {
   const navigate = useNavigate()
@@ -46,9 +47,9 @@ const Login = ({ toggleAuthenticated, setUser, user }) => {
             value={formValues.password}
             required
           />
-          <button className="button" disabled={!formValues.email || !formValues.password}>
+          <Button variant="contained" color="secondary" disabled={!formValues.email || !formValues.password}>
             Sign In
-          </button>
+          </Button>
         </form>
       </div>
     </div>

@@ -3,6 +3,10 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 import { useNavigate } from 'react-router-dom'
+import { Button } from '@mui/material'
+import AddIcon from '@mui/icons-material/Add'
+import EditIcon from '@mui/icons-material/Edit'
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const AddCat = ({ user }) => {
   console.log(user)
@@ -91,9 +95,9 @@ const AddCat = ({ user }) => {
 
           />
 
-          <button className="button" type="submit">
+          <Button startIcon={<AddIcon />} variant="contained" color="secondary" type="submit">
             CREATE CAT
-          </button>
+          </Button>
           <div className="aside">Need to Pair a new device? <br></br> Head back to the Profile page</div>
         </form>
 
