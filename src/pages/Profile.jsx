@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { Button } from '@mui/material'
 
 
 const Profile = ({ user }) => {
@@ -55,11 +56,11 @@ const Profile = ({ user }) => {
 
           <div></div>
           <Link to={'/cats/add'}>
-            <button>Add Cat</button>
+            <Button variant="contained" color="secondary" >Add Cat</Button>
           </Link>
 
-          <button>Edit Cat</button>
-          <button onClick={() => deleteCat()}>Remove Cat</button>
+          <Button variant="contained" color="secondary" >Edit Cat</Button>
+          <Button variant="contained" color="secondary" onClick={() => deleteCat()}>Remove Cat</Button>
         </buttons>
       </div>
       <Devices />
